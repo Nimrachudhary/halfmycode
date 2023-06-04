@@ -44,7 +44,8 @@
                             <nav class="menu-mobile__top-events">
                                 <a style="text-decoration: none" href="/special" class="menu-mobile__item">Special
                                     events</a>
-                                <a style="text-decoration: none" href='/topvoucher' class="menu-mobile__item">Top Vouchers</a>
+                                <a style="text-decoration: none" href='/topvoucher' class="menu-mobile__item">Top
+                                    Vouchers</a>
                             </nav>
                             <nav class="menu-mobile__navigation" data-accordion>
                                 <div data-dropdown>
@@ -120,7 +121,7 @@
                     </div>
                 </div>
                 <a style="text-decoration: none" href="/" title="Halfmycode" class="header-logo header-logo--uk"
-                    style="text-decoration: none"><b>HALFMYCODE</b></a>
+                    style="text-decoration: none"><b style="margin: 21px;">HALFMYCODE</b></a>
                 <button class="header-button-search" alt="Search" data-toggle="modal" data-target="#search_modal"
                     aria-label="search">
                     <svg width="24" height="24" viewBox="0 0 515.558 515.558"
@@ -130,15 +131,6 @@
                             d="M378.344 332.78c25.37-34.645 40.545-77.2 40.545-123.333C418.889 93.963 324.928.002 209.444.002S0 93.963 0 209.447s93.961 209.445 209.445 209.445c46.133 0 88.692-15.177 123.337-40.547l137.212 137.212 45.564-45.564L378.344 332.78zm-168.899 21.667c-79.958 0-145-65.042-145-145s65.042-145 145-145 145 65.042 145 145-65.043 145-145 145z" />
                     </svg>
                 </button>
-
-
-                {{-- <button type="button" class="btn btn-primary header-button-search" data-toggle="modal" data-target="#search_modal">
-                    <svg width="24" height="24" viewBox="0 0 515.558 515.558" xmlns="http://www.w3.org/2000/svg">
-                        <defs />
-                        <path fill="currentColor"
-                            d="M378.344 332.78c25.37-34.645 40.545-77.2 40.545-123.333C418.889 93.963 324.928.002 209.444.002S0 93.963 0 209.447s93.961 209.445 209.445 209.445c46.133 0 88.692-15.177 123.337-40.547l137.212 137.212 45.564-45.564L378.344 332.78zm-168.899 21.667c-79.958 0-145-65.042-145-145s65.042-145 145-145 145 65.042 145 145-65.043 145-145 145z" />
-                    </svg>
-                </button> --}}
                 <ul class="main-header-nav">
                     <li>
                         <a style="text-decoration: none" href="/special">Special events</a>

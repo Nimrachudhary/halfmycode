@@ -23,7 +23,7 @@
                       <nav>
                           <a style="text-decoration: none"  href="/special">Special events</a>
                           <a style="text-decoration: none"  href="/blogs">Blog</a>
-                          <a style="text-decoration: none"  href="/faq.html">FAQ</a>
+                     
                       </nav>
                       <nav>
                           @foreach ($menu_page as $page)
@@ -62,8 +62,6 @@
       </div>
       <div class="container">
           <small class="footer-legal">
-              {{-- <strong>Webravo SRL</strong> <br /> --}}
-
               Copyright © 2023 All Rights Reserved Halfmycode.com </small>
       </div>
       <script src="{{ asset('frontend/commons.6713daff34af50ea2430.js') }}" async defer></script>

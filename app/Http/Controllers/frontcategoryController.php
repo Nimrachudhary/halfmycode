@@ -15,14 +15,13 @@ class frontcategoryController extends Controller
     public function categories(Request $request)
     {
         $category = Category::get();
-        return view('frontend.categories', compact('category'));
+        return view('frontend.Categories', compact('category'));
     }
     public function detailcategories($id)
     {
         $dropdownCategories = Category::with(['stores' =>  function ($query) {
             $query->orderBy('created_at', 'desc')->limit(5);
         }])->limit(5)->get();
-        // dd($dropdownCategories);
         $category = Category::where('slug', $id)->get();
         $coupon = Coupon::where('catgory_id', $category[0]->id)->get();
         $store = Store::where('category_id', $category[0]->id)->get();

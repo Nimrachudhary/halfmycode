@@ -1024,7 +1024,7 @@
             <div class="container">
                 <section class="section-content section-content--full">
                     <div class="latest-blog-wrapper latest-blog-wrapper--home">
-                        <h2 class="h1 mb--lg">The latest from our blog</h2>
+                        <h2 class="h3 mb--lg">The latest from our blog</h2>
                         <div class="latest-blog-grid">
                             @foreach ($blogs as $blogs)
                                 <a href="/blog/{{ $blogs->slug }}" class="latest-blog">
@@ -1075,7 +1075,7 @@
             <div class="container">
                 <section class="section-content section-content--full">
                     <h3 class="h3 mb--xxs">The Best UK Promo Codes – Buy More for Less at HALFMYCODE</h3>
-                    <p>HALFMYCODE.co.uk is an online shopping platform for consumers who are looking to save on their
+                    <p>HALFMYCODE.co.USA is an online shopping platform for consumers who are looking to save on their
                         online purchases.
                         We at HALFMYCODE provide shoppers with thousands of <strong>discount codes, vouchers</strong>
                         and online deals
@@ -1102,7 +1102,7 @@
                         jewellery, gift cards, mobile phone companies and many more! This is just a taste of our
                         fantastic collection.
                         Helping you save money safely and easily every day is what we do best.
-                        We guarantee that all the discounts you’ll find on HALFMYCODE.co.uk are working and ready to
+                        We guarantee that all the discounts you’ll find on HALFMYCODE.co.USA are working and ready to
                         get you saving on
                         your order today!
                     </p>
@@ -1128,9 +1128,6 @@
                         price drop. Saving on
                         all your online purchases has never been this simple!
                     </p>
-
-                    <p>Check out our <a href="/faq.html" title="FAQ">frequently asked questions page</a> to find
-                        out more.</p>
                 </section>
             </div>
         </section>
@@ -1175,7 +1172,7 @@
             <div class="container">
                 <section class="section-content section-content--full">
                     <div class="our-numbers-wrapper">
-                        <p class="h1 text-center mb--xl">Halfmycode&#x27;s stats</p>
+                        <p class="h2 text-center mb--xl">Halfmycode&#x27;s stats</p>
                         <div class="our-numbers-grid">
                             <!-- item -->
                             <div class="our-number">

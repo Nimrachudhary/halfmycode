@@ -2,7 +2,7 @@
 <html lang="en-GB">
 
 <head>
-    <title>project</title>
+    <title>HalfmyCode:Discunt Code, Vouchers & Deals</title>
     <link href="{{ asset('/frontend/style.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">

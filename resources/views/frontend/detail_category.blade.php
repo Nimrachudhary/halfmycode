@@ -20,12 +20,12 @@
                     <section class='section-content section-content--full'>
                         @foreach ($category as $category)
                             <div class='category-header'>
-                                <h1 class='category-header__title mb'>
+                                <h3 class='category-header__title mb'>
                                     {{ $category->title }}
-                                </h1>
-                                <h2 class='category-header__subtitle font-bold mb--sm'>
+                                </h3>
+                                <h4 class='category-header__subtitle font-bold mb--sm'>
                                     {{ $category->description }}
-                                </h2>
+                                </h4>
                                 <picture class="category-header__image">
                                     {{-- <source srcset="https://cdn.bravo-savings-network.com/cdn2/events/md/mothers-day.webp"
                                     type="image/webp"> --}}
@@ -99,22 +99,7 @@
 
                                                         </div>
                                                     </div>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                        data-target="#exampleModal">
-                                                        Launch demo modal
-                                                    </button>
-                                                    {{-- <div class="btn button-code copycodebtn">
-                                                <a class="btn-label btn-show-code"
-                                                    data-modal-id="#exampleModal{{ $copon->id }}"
-                                                    data-affilinkite-link="{{ $copon->Affilate_Link }}"
-                                                    name="getcode[]" id="{{ $copon->coupon_code }}"
-                                                    value="{{ $copon->coupon_code }}">
-                                                    SHOW CODE
-                                                </a>
-                                                <span class="codebx">{{ $copon->coupon_code }}</span>
-                                                <input type="hidden" name="{{ $copon->coupon_code }}"
-                                                    value="{{ $copon->coupon_code }}">
-                                            </div> --}}
+                                                    
                                                 @elseif($coupon->Cupon_type == 'getdeal')
                                                     <div class="merchant-deal__cta">
                                                         <div class="btn btn-offer" data-code=""
@@ -164,7 +149,7 @@
             <section class="mt--xxl">
                 <div>
                     <section class="section-content section-content--full">
-                       
+
                         <section class="mt--xxl">
                             <div class="container">
                                 <section class="section-content section-content--full">

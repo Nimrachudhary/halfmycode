@@ -13,8 +13,8 @@
                     <div class="section-content__page-content">
                         <div class="all-categories-wrapper">
                             <div class="text-center-desktop">
-                                <h1 class="mb--lg">Shop by Category</h1>
-                                <h2>Save up to 90% with our vouchers and deals</h2>
+                                <h2 class="mb--lg">Shop by Category</h2>
+                                <h3>Save up to 90% with our vouchers and deals</h3>
                             </div>
                             {{-- @foreach ($category as $category) --}}
                             <div class="all-categories-grid pt--xl mb-lg pb--lg">
@@ -43,7 +43,7 @@
             <div class="container">
                 <section class="section-content section-content--full">
                     <div class="latest-merchant-wrapper">
-                        <p class="h1 mb--lg">Recently updated brands</p>
+                        <p class="h2 mb--lg">Recently updated brands</p>
                         <div class="tag-link-grid">
                             <a href="/discount-code-vans.html" class="tag-link"
                                 title='Discount Code Vans'>Vans</a>
@@ -62,7 +62,7 @@
             <div class="container">
                 <section class="section-content section-content--full">
                     <div class="our-numbers-wrapper">
-                        <p class="h1 text-center mb--xl">HALFMYCODE&#x27;s stats</p>
+                        <p class="h2 text-center mb--xl">HALFMYCODE&#x27;s stats</p>
                         <div class="our-numbers-grid">
                             <div class="our-number">
                                 <img src="https://cdn.bravo-savings-network.com/cdn2/icons/values-users.svg"

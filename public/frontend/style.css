@@ -1994,7 +1994,7 @@ h5,
     max-width: 100%;
     width: 220px;
     height: 45px;
-    font-size: 30px;
+    font-size: 20px;
     /* background-repeat: no-repeat; */
     text-decoration: none;
     color: white;
@@ -2128,6 +2128,7 @@ h5,
     text-align: center;
     color: var(--gray);
     line-height: 1.3;
+    font-size: 100%;
 }
 
 .footer-legal strong {
@@ -6177,12 +6178,7 @@ h1,
     grid-area: image;
 }
 
-.category-header__image img {
-    max-width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
+
 
 .category-header__text {
     grid-area: text;
@@ -6238,8 +6234,8 @@ h1,
 }
 
 .category-header__image img {
-    max-width: 100%;
-    height: 100%;
+    max-width: 80%;
+    height: 80%;
     -o-object-fit: cover;
     object-fit: cover;
 }

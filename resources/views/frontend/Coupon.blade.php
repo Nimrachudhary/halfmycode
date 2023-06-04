@@ -169,7 +169,8 @@
                                                     {{-- <strong>15%</strong> discount --}}
                                                     <picture>
                                                         <img src="{{ asset('images/' . $store->image) }}" alt="AEG"
-                                                            width="300" height="190" class="img-fluid" fetchpriority="high">
+                                                            width="300" height="190" class="img-fluid"
+                                                            fetchpriority="high">
                                                     </picture>
                                                 </div>
                                                 <div class="merchant-deal__content">
@@ -189,35 +190,22 @@
                                                                 data-sku="UK-2864363" data-pos="1" data-lst="merchant">
                                                                 <span style="font-weight: 400;">GET CODE</span>
                                                             </a>
-
                                                         </div>
-                                                        {{-- <div class="btn button-code copycodebtn">
-                                                                <a class="btn-label btn-show-code"
-                                                                    data-modal-id="#exampleModal{{ $copon->id }}"
-                                                                    data-affilinkite-link="{{ $copon->Affilate_Link }}"
-                                                                    name="getcode[]" id="{{ $copon->coupon_code }}"
-                                                                    value="{{ $copon->coupon_code }}">
-                                                                    SHOW CODE
-                                                                </a>
-                                                                <span class="codebx">{{ $copon->coupon_code }}</span>
-                                                                <input type="hidden" name="{{ $copon->coupon_code }}"
-                                                                    value="{{ $copon->coupon_code }}">
-                                                            </div>
-                                                            <div class="offer-code">Code </div> --}}
                                                     @elseif($coupon->Cupon_type == 'getdeal')
                                                         <div class="merchant-deal__cta">
-                                                            <div class="btn btn-offer" data-code=""
-                                                                data-popup="L2Rpc2NvdW50LWNvZGUtYWVnLmh0bWwjMjU5ODczNg&#x3D;&#x3D;"
-                                                                data-out="L2RlYWwvMjU5ODczNi5odG1sP3Q9MTY3NjkxOTA5NjIzOA&#x3D;&#x3D;"
-                                                                data-sku="UK-2598736" data-pos="12" data-lst="merchant">
+                                                            <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}"
+                                                                data-modal-id="#exampleModal{{ $coupon->id }}"
+                                                                data-affilinkite-link="{{ $coupon->Affilate_Link }}"
+                                                                target="blank"
+                                                                data-popup="L2Rpc2NvdW50LWNvZGUtYWVnLmh0bWwjMjg2NDM2Mw&#x3D;&#x3D;"
+                                                                data-out="L2RlYWwvMjg2NDM2My5odG1sP3Q9MTY3NjkxOTA5NjE2NQ&#x3D;&#x3D;"
+                                                                data-sku="UK-2864363" data-pos="1" data-lst="merchant">
                                                                 <span>GET DEAL</span>
-                                                            </div>
+                                                            </a>
                                                         </div>
                                                     @endif
-
                                                 </div>
                                             </section>
-
                                             <section class="merchant-deal__footer">
                                                 <div class="merchant-deal__footer-left"></div>
                                                 <div class="merchant-deal__footer-right">
@@ -226,7 +214,7 @@
                                                             src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
                                                             alt="clock" width="14" height="14"
                                                             loading="lazy" />
-                                                            Expiry Date: {{ $coupon->expiry_date }}
+                                                        Expiry Date: {{ $coupon->expiry_date }}
                                                     </div>
                                                     {{-- <div class="pull-right">
                                                 <div class="deal-details-toggle"

@@ -20,12 +20,12 @@
                     <section class='section-content section-content--full'>
                         @foreach ($category as $category)
                             <div class='category-header'>
-                                <h3 class='category-header__title mb'>
+                                <h4 class='category-header__title mb'>
                                     {{ $category->title }}
-                                </h3>
-                                <h4 class='category-header__subtitle font-bold mb--sm'>
-                                    {{ $category->description }}
                                 </h4>
+                                <h5 class='category-header__subtitle mb--sm'>
+                                    {{ $category->description }}
+                                </h5>
                                 <picture class="category-header__image">
                                     {{-- <source srcset="https://cdn.bravo-savings-network.com/cdn2/events/md/mothers-day.webp"
                                     type="image/webp"> --}}
@@ -99,7 +99,7 @@
 
                                                         </div>
                                                     </div>
-                                                    
+
                                                 @elseif($coupon->Cupon_type == 'getdeal')
                                                     <div class="merchant-deal__cta">
                                                         <div class="btn btn-offer" data-code=""

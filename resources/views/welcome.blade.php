@@ -1074,7 +1074,7 @@
         <section class="mt--xxl">
             <div class="container">
                 <section class="section-content section-content--full">
-                    <h3 class="h3 mb--xxs">The Best UK Promo Codes – Buy More for Less at HALFMYCODE</h3>
+                    <h3 class="h3 mb--xxs">The Best USA Promo Codes – Buy More for Less at HALFMYCODE</h3>
                     <p>HALFMYCODE.co.USA is an online shopping platform for consumers who are looking to save on their
                         online purchases.
                         We at HALFMYCODE provide shoppers with thousands of <strong>discount codes, vouchers</strong>
@@ -1093,7 +1093,7 @@
                         you.
                         At HALFMYCODE, we are very careful about the brands we’ve selected: only the <strong>most
                             popular and trending
-                            shops in the UK</strong> and the ones with the biggest discounts can be part of our
+                            shops in the USA</strong> and the ones with the biggest discounts can be part of our
                         partnership network. They
                         need to respect both the transparency of deals as well as our customers. You’ll find a huge
                         range of brands to

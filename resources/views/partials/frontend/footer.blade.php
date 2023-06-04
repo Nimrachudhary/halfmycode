@@ -23,7 +23,7 @@
                       <nav>
                           <a style="text-decoration: none"  href="/special">Special events</a>
                           <a style="text-decoration: none"  href="/blogs">Blog</a>
-                     
+
                       </nav>
                       <nav>
                           @foreach ($menu_page as $page)
@@ -57,7 +57,7 @@
           </div>
           <div class='text-center-desktop text-center-mobile'>
               <p>We are paid a small commission by our partners when a purchase is made on their site via the links on
-                Halfmycode.co.uk</p>
+                Halfmycode.co.USA</p>
           </div>
       </div>
       <div class="container">

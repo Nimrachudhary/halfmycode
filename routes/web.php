@@ -45,7 +45,7 @@ Route::get('specials/{id}', [FrontStoreController::class, 'detailspecial']);
 
 Route::get('/topvoucher', [FrontStoreController::class, 'topvoucher']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 Route::get('/changeuseractive', [CategoryController::class, 'changeuseractive'])->name('changeuseractive');
 Route::get('/changestoreactive', [StoreController::class, 'changestoreactive'])->name('changestoreactive');
 Route::get('/changestatusblog', [BlogController::class, 'changestatusblog'])->name('changestatusblog');

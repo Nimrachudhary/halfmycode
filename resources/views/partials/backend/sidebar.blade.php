@@ -51,7 +51,7 @@
      <div class="shadow-bottom"></div>
      <div class="main-menu-content">
          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-             <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('home') }}"><i
+             <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('dashboard') }}"><i
                          data-feather="home"></i><span class="menu-title text-truncate"
                          data-i18n="Dashboards">Dashboards</span>
                  </a>

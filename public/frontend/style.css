@@ -3889,7 +3889,7 @@ h5,
 }
 
 .newsletter-signup-wrapper {
-    background-color:  #151b54;;
+    background-color: #151b54;
     padding: 4rem 1rem;
 }
 
@@ -3897,9 +3897,8 @@ h5,
     /* color: var(--support); */
     color: white;
 }
-.newsletter-subtitle{
+.newsletter-subtitle {
     color: white;
-
 }
 
 .newsletter-signup-wrapper--condensed {
@@ -6178,8 +6177,6 @@ h1,
     grid-area: image;
 }
 
-
-
 .category-header__text {
     grid-area: text;
 }
@@ -6257,5 +6254,11 @@ h1,
 
     .header-button-search {
         display: none;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width:400px) {
+    body {
+        width: 163%;
     }
 }

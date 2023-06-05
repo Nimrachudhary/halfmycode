@@ -193,16 +193,16 @@
                                                         </div>
                                                     @elseif($coupon->Cupon_type == 'getdeal')
                                                         <div class="merchant-deal__cta">
-                                                            <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}"
+                                                            <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}" target="_blank"
                                                                 data-modal-id="#exampleModal{{ $coupon->id }}"
-                                                                data-affilinkite-link="{{ $coupon->Affilate_Link }}"
-                                                                target="blank"
-                                                                data-popup="L2Rpc2NvdW50LWNvZGUtYWVnLmh0bWwjMjg2NDM2Mw&#x3D;&#x3D;"
-                                                                data-out="L2RlYWwvMjg2NDM2My5odG1sP3Q9MTY3NjkxOTA5NjE2NQ&#x3D;&#x3D;"
+
+
+
                                                                 data-sku="UK-2864363" data-pos="1" data-lst="merchant">
                                                                 <span>GET DEAL</span>
                                                             </a>
                                                         </div>
+                                                       
                                                     @endif
                                                 </div>
                                             </section>

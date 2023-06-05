@@ -57,7 +57,7 @@
           </div>
           <div class='text-center-desktop text-center-mobile'>
               <p>We are paid a small commission by our partners when a purchase is made on their site via the links on
-                Halfmycode.co.USA</p>
+                Halfmycode.com</p>
           </div>
       </div>
       <div class="container">

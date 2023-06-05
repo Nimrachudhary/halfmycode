@@ -1075,7 +1075,7 @@
             <div class="container">
                 <section class="section-content section-content--full">
                     <h3 class="h3 mb--xxs">The Best USA Promo Codes – Buy More for Less at HALFMYCODE</h3>
-                    <p>HALFMYCODE.co.USA is an online shopping platform for consumers who are looking to save on their
+                    <p>HALFMYCODE.com is an online shopping platform for consumers who are looking to save on their
                         online purchases.
                         We at HALFMYCODE provide shoppers with thousands of <strong>discount codes, vouchers</strong>
                         and online deals
@@ -1102,7 +1102,7 @@
                         jewellery, gift cards, mobile phone companies and many more! This is just a taste of our
                         fantastic collection.
                         Helping you save money safely and easily every day is what we do best.
-                        We guarantee that all the discounts you’ll find on HALFMYCODE.co.USA are working and ready to
+                        We guarantee that all the discounts you’ll find on HALFMYCODE.com are working and ready to
                         get you saving on
                         your order today!
                     </p>

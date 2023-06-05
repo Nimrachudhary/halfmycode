@@ -166,6 +166,10 @@
                         <p class="h1 text-center weekly-deal-title">Deals of the week</p>
                         <div class="grid-3 grid-scroller-mobile pt--xl pl pr pl--lg-mobile pb--md-mobile">
                             @foreach ($weeks as $value)
+                            @php
+                               $arr=[];
+                               $arr[] = $coupon->image;
+                            @endphp
                                 @if ($value->deal_week == 1)
                                     <article id="boxWeeklyDealArticle_4261"
                                         class="weekly-deal"data-href='/discount-code-marriott-bonvoy.html' data-pos="1"
@@ -173,11 +177,7 @@
                                         data-id="4261"data-title="R3JhYiB0aGlzIE1hcnJpb3R0IGRpc2NvdW50IGNvZGUgZm9yIDI1JSBvZmYgeW91ciBzdGF5IGluIEV1cm9wZSAtIE1hcnJpb3R0">
                                         <div class="weekly-deal__header">
                                             <picture>
-                                                {{-- <source
-                                            srcset="https://cdn.bravo-savings-network.com/cdn2/box/md/grab-marriott-discount-code-25-off-stay-europe-202211134308.webp, https://cdn.bravo-savings-network.com/cdn2/box/md/grab-marriott-discount-code-25-off-stay-europe-202211134308@2x.webp 2x"
-                                            type="image/webp"> --}}
-                                                <img src="{{ asset('images') . '/' . $coupon->image }}"
-                                                    {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/box/md/grab-marriott-discount-code-25-off-stay-europe-202211134308@2x.jpg 2x" --}} type="image/jpeg" alt="Marriott" loading="lazy" />
+                                                <img src="{{ asset('images') . '/' . $value->image }}" type="image/jpeg" alt="Marriott" loading="lazy" />
                                             </picture>
                                         </div>
                                         <div class="weekly-deal__content">
@@ -186,8 +186,8 @@
                                                     title="">
                                                     <picture class="">
                                                         <img class=""
-                                                            src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                            {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/marriott-bonvoy-20220211091551-logo@2x.png 2x" --}} type="image/png" alt="Marriott"
+                                                            src="{{ asset('images') . '/' . $value->store->image }}"
+                                                          type="image/png" alt="Marriott"
                                                             loading="lazy" width="90" height="45" />
                                                     </picture>
                                                 </a>
@@ -203,6 +203,7 @@
                                     </article>
                                 @endif
                             @endforeach
+                           
                         </div>
                     </div>
                     {{-- <script>

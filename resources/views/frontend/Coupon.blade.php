@@ -27,8 +27,8 @@
                                     <div class="merchant-header__logo">
                                         <a href="{{ $store->affilite_link }}" target="_blank">
                                             <picture>
-                                                <img src="{{ asset('images/' . $store->image) }}" alt="AEG"
-                                                    width="300" height="190" class="img-fluid" fetchpriority="high">
+                                                <img src="{{ asset('images/' . $store->image) }}" width="300"
+                                                    height="190" class="img-fluid" fetchpriority="high">
                                             </picture>
                                         </a>
                                     </div>
@@ -168,9 +168,8 @@
                                                 <div class="merchant-deal__shoutout">
                                                     {{-- <strong>15%</strong> discount --}}
                                                     <picture>
-                                                        <img src="{{ asset('images/' . $store->image) }}" alt="AEG"
-                                                            width="300" height="190" class="img-fluid"
-                                                            fetchpriority="high">
+                                                        <img src="{{ asset('images/' . $store->image) }}" width="300"
+                                                            height="190" class="img-fluid" fetchpriority="high">
                                                     </picture>
                                                 </div>
                                                 <div class="merchant-deal__content">
@@ -193,16 +192,13 @@
                                                         </div>
                                                     @elseif($coupon->Cupon_type == 'getdeal')
                                                         <div class="merchant-deal__cta">
-                                                            <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}" target="_blank"
+                                                            <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}"
+                                                                target="_blank"
                                                                 data-modal-id="#exampleModal{{ $coupon->id }}"
-
-
-
                                                                 data-sku="UK-2864363" data-pos="1" data-lst="merchant">
                                                                 <span>GET DEAL</span>
                                                             </a>
                                                         </div>
-                                                       
                                                     @endif
                                                 </div>
                                             </section>
@@ -214,7 +210,9 @@
                                                             src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
                                                             alt="clock" width="14" height="14"
                                                             loading="lazy" />
-                                                        Expiry Date: {{ $coupon->expiry_date }}
+                                                        Expiry Date:
+                                                        {{ $coupon->expiry_date }}
+                                                        {{-- {{ $coupon->expiry_date->format('d-m-y') }} --}}
                                                     </div>
                                                     {{-- <div class="pull-right">
                                                 <div class="deal-details-toggle"
@@ -259,7 +257,7 @@
                                 <nav class="breadcrumbs pl--md-mobile">
                                     <a href="/" target="_self">Halfmycode</a>
                                     {{-- <a href="/category-appliances.html" target="_self">Appliances</a> --}}
-                                    <span>AEG Voucher Code</span>
+                                    <span> {{ $store->name }}</span>
                                 </nav>
                             </div>
                         </div>
@@ -268,18 +266,6 @@
                                 <section class="section-content section-content--middle">
                                     <div class="section-content__page-content">
                                         <div class="star-rating-mobile-wrapper mb--xxs">
-                                            <div class="star-rating-mobile__logo">
-                                                <picture class="img-fluid">
-                                                    <source
-                                                        srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/aeg-20200127165927-logo.webp, https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/aeg-20200127165927-logo@2x.webp 2x"
-                                                        type="image/webp">
-                                                    <img class="img-fluid"
-                                                        src="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/aeg-20200127165927-logo.png"
-                                                        srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/aeg-20200127165927-logo@2x.png"
-                                                        type="image/png" alt="AEG" width="150" height="75"
-                                                        loading="lazy" />
-                                                </picture>
-                                            </div>
                                             <div class="star-rating-wrapper ml--md mb--xxs">
                                                 <div class="star-rating mobile" style="--rating-value: 5"></div>
                                                 Average score of 5 out of 465 reviews

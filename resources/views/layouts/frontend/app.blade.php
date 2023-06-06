@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 
 <head>
     <title>HalfmyCode: Discount Code, Vouchers & Deals</title>
@@ -7,7 +7,7 @@
     <meta name="keywords" content="halfmycode.com">
     <meta http-equiv="content-type" content="text/html ;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="{{ asset('/frontend/style.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">

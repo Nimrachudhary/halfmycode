@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use Carbon\Carbon;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -13,5 +14,9 @@ class Coupon extends Model
     public function store()
     {
         return $this->hasOne(Store::class, 'id', 'store_id');
+    }
+    public function getCreatedAtAttribute($value)
+    {
+         return Carbon::parse($value)->format('d-m-y H:i:s');
     }
 }

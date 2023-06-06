@@ -36,7 +36,7 @@ class FrontStoreController extends Controller
     public function blog(Request $request)
     {
         $blogs = Blog::get();
-        return view('frontend.blogs',compact('blogs'));
+        return view('frontend.Blogs',compact('blogs'));
     }
     public function subblog($id)
     {

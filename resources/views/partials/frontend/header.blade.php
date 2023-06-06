@@ -203,7 +203,7 @@
                         <div class="form-search__inner">
                             <div class="input-btn-group">
                                 <input name="search" autocomplete="off"id="text__search"
-                                    placeholder="E.g. SHEIN, Spabreaks.com"
+                                    placeholder="E.g. SHEIN, Spabreaks.com" style="font-size: 13px;"
                                     class="form-search__input"autocomplete="off" data-search-input />
                                 <button type="button" class="form-search__submit" aria-label="search"
                                     data-search-submit>
@@ -341,7 +341,7 @@
                         <div class="form-search__inner">
                             <div class="input-btn-group">
                                 <input name="search" autocomplete="off"id="text__search"
-                                    placeholder="E.g. SHEIN, Spabreaks.com"
+                                    placeholder="E.g. SHEIN, Spabreaks.com"style="font-size: 13px;"
                                     class="form-search__input"autocomplete="off" data-search-input />
                                 <button type="button" class="form-search__submit" aria-label="search"
                                     data-search-submit>

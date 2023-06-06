@@ -23,8 +23,8 @@
                                     <div class="premium-offer__media">
                                         <picture class="img-fit-cover">
                                             <img class="img-fit-cover" src="{{ asset('images') . '/' . $coupon->image }}"
-                                                {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/box/md/black-friday-event-clothing-exclusive-discount-code-extra-11-off-202211124349@2x.jpg 2x" --}} type="image/jpeg" alt="Yours Clothing" loading="lazy"
-                                                width="300" height="250" />
+                                                type="image/jpeg" alt="Yours Clothing" loading="lazy" width="300"
+                                                height="250" />
                                         </picture>
                                     </div>
                                     <div class="premium-offer__body">
@@ -34,8 +34,8 @@
                                                 <picture class="img-fit-center">
                                                     <img class="img-fit-center"
                                                         src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                        {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/yours-clothing-20221107123355-logo@2x.png 2x" --}} type="image/png" alt="Yours Clothing"
-                                                        loading="lazy" width="90" height="45" />
+                                                        type="image/png" alt="Yours Clothing" loading="lazy" width="90"
+                                                        height="45" />
                                                 </picture>
                                             </a>
                                         </div>
@@ -44,7 +44,12 @@
                                         </p>
                                         <div class="premium-offer__footer">
                                             <a href="/store/{{ $coupon->store->slug }}" class="premium-offer__link">
-                                                {{ $coupon->Cupon_type }}</a>
+                                                @if ($coupon->Cupon_type == 'getcode')
+                                                    <span>Get Code</span>
+                                                @elseif($coupon->Cupon_type == 'getdeal')
+                                                    <span>Get Deal</span>
+                                                @endif
+                                            </a>
                                         </div>
                                     </div>
                                 </article>
@@ -166,34 +171,35 @@
                         <p class="h1 text-center weekly-deal-title">Deals of the week</p>
                         <div class="grid-3 grid-scroller-mobile pt--xl pl pr pl--lg-mobile pb--md-mobile">
                             @foreach ($weeks as $value)
-                            @php
-                               $arr=[];
-                               $arr[] = $coupon->image;
-                            @endphp
+                                @php
+                                    $arr = [];
+                                    $arr[] = $coupon->image;
+                                @endphp
                                 @if ($value->deal_week == 1)
                                     <article id="boxWeeklyDealArticle_4261"
-                                        class="weekly-deal"data-href='/discount-code-marriott-bonvoy.html' data-pos="1"
+                                        class="weekly-deal"data-href='/store/{{ $value->store->slug }}' data-pos="1"
                                         data-lst="home-weekly-deals"
                                         data-id="4261"data-title="R3JhYiB0aGlzIE1hcnJpb3R0IGRpc2NvdW50IGNvZGUgZm9yIDI1JSBvZmYgeW91ciBzdGF5IGluIEV1cm9wZSAtIE1hcnJpb3R0">
                                         <div class="weekly-deal__header">
                                             <picture>
-                                                <img src="{{ asset('images') . '/' . $value->image }}" type="image/jpeg" alt="Marriott" loading="lazy" />
+                                                <img src="{{ asset('images') . '/' . $value->image }}" type="image/jpeg"
+                                                    alt="Marriott" loading="lazy" />
                                             </picture>
                                         </div>
                                         <div class="weekly-deal__content">
                                             <div class="grid-2">
-                                                <a href="/discount-code-marriott-bonvoy.html" class="weekly-deal__logo"
+                                                <a href="/store/{{ $value->store->slug }}" class="weekly-deal__logo"
                                                     title="">
                                                     <picture class="">
                                                         <img class=""
                                                             src="{{ asset('images') . '/' . $value->store->image }}"
-                                                          type="image/png" alt="Marriott"
-                                                            loading="lazy" width="90" height="45" />
+                                                            type="image/png" alt="Marriott" loading="lazy"
+                                                            width="90" height="45" />
                                                     </picture>
                                                 </a>
                                                 <label class="weekly-deal__title">
                                                     <a
-                                                        href="/discount-code-marriott-bonvoy.html">{{ $value->store->name }}</a>
+                                                        href="/store/{{ $value->store->slug }}">{{ $value->store->name }}</a>
                                                 </label>
                                             </div>
                                             <div class="weekly-deal__description">
@@ -203,7 +209,7 @@
                                     </article>
                                 @endif
                             @endforeach
-                           
+
                         </div>
                     </div>
                     {{-- <script>
@@ -341,20 +347,19 @@
                             @foreach ($weeks as $value)
                                 @if ($value->deal_week == 1)
                                     <article id="boxWeeklyDealArticle_4261" class="weekly-deal"
-                                        data-href='/discount-code-marriott-bonvoy.html' data-pos="1"
+                                        data-href='/store/{{ $value->store->slug }}' data-pos="1"
                                         data-lst="home-weekly-deals" data-id="4261"
                                         data-title="R3JhYiB0aGlzIE1hcnJpb3R0IGRpc2NvdW50IGNvZGUgZm9yIDI1JSBvZmYgeW91ciBzdGF5IGluIEV1cm9wZSAtIE1hcnJpb3R0">
                                         <div class="weekly-deal__header">
                                             <picture>
 
-                                                <img src="{{ asset('images') . '/' . $coupon->image }}"
-                                                    type="image/jpeg" alt="Marriott"
-                                                    loading="lazy" />
+                                                <img src="{{ asset('images') . '/' . $coupon->image }}" type="image/jpeg"
+                                                    alt="Marriott" loading="lazy" />
                                             </picture>
                                         </div>
                                         <div class="weekly-deal__content">
                                             <div class="grid-2">
-                                                <a href="/discount-code-marriott-bonvoy.html" class="weekly-deal__logo"
+                                                <a href="/store/{{ $value->store->slug }}" class="weekly-deal__logo"
                                                     title="">
                                                     <picture class="">
                                                         <source
@@ -370,7 +375,7 @@
                                                 </a>
                                                 <label class="weekly-deal__title">
                                                     <a
-                                                        href="/discount-code-marriott-bonvoy.html">{{ $value->store->name }}</a>
+                                                        href="/store/{{ $value->store->slug }}">{{ $value->store->name }}</a>
                                                 </label>
                                             </div>
                                             <div class="weekly-deal__description">
@@ -1001,20 +1006,18 @@
                 <section class="section-content section-content--full">
                     <div class="category-accordion-wrapper">
                         <p class="h1 mb">Special events</p>
-                        @foreach ($special_events as $event)
-                            <div class="grid-1 grid-3-md">
+                        <div class="grid-1 grid-3-md">
+                            @foreach ($special_events as $event)
                                 <a href="/specials/{{ $event->slug }}" class="latest-event">
                                     <picture class="latest-event__image">
-                                        {{-- <source srcset="https://cdn.bravo-savings-network.com/cdn2/events/md/cyber-week.webp"
-                                        type="image/webp"> --}}
                                         <img class="img-fit-cover" src="{{ asset('images') . '/' . $event->image }}"
                                             type="image/jpg" alt="Cyber Monday Sales" loading="lazy" width="300"
                                             height="160" />
                                     </picture> <span class="latest-event__name">{{ $event->name }}</span>
                                     <span class="latest-event__bar"></span>
                                 </a>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
                 </section>
             </div>
@@ -1186,9 +1189,8 @@
                             </div>
                             <!-- item -->
                             <div class="our-number">
-                                <img src="{{ asset('images/footerbrand.jpeg') }}"
-                                    alt="icon boutiques" loading="lazy" class="img-fluid our-number__img" width="174"
-                                    height="140" />
+                                <img src="{{ asset('images/footerbrand.jpeg') }}" alt="icon boutiques" loading="lazy"
+                                    class="img-fluid our-number__img" width="174" height="140" />
                                 <div class="our-number__text">
                                     <strong>6,000+</strong>
                                     Brands
@@ -1196,9 +1198,8 @@
                             </div>
                             <!-- item -->
                             <div class="our-number">
-                                <img src="{{ asset('images/coupons.jpeg') }}"
-                                    alt="icon codes" loading="lazy" class="img-fluid our-number__img" width="174"
-                                    height="140" />
+                                <img src="{{ asset('images/coupons.jpeg') }}" alt="icon codes" loading="lazy"
+                                    class="img-fluid our-number__img" width="174" height="140" />
                                 <div class="our-number__text">
                                     <strong>150,000+</strong>
                                     Coupons
@@ -1207,9 +1208,8 @@
 
                             <!-- item -->
                             <div class="our-number">
-                                <img src="{{ asset('images/verified.jpeg') }}"
-                                    alt="icon verified" loading="lazy" class="img-fluid our-number__img" width="174"
-                                    height="140" />
+                                <img src="{{ asset('images/verified.jpeg') }}" alt="icon verified" loading="lazy"
+                                    class="img-fluid our-number__img" width="174" height="140" />
                                 <div class="our-number__text">
                                     <strong>98%</strong>
                                     Verified

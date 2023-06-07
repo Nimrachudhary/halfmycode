@@ -8,6 +8,7 @@ use App\Models\Coupon;
 use App\Models\Store;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class CouponController extends Controller
 {
@@ -36,8 +37,8 @@ class CouponController extends Controller
     public function create()
     {
         $category = Category::get();
-        $store= Store::get();
-        return view('backend.coupon.create',compact('category','store'));
+        $store = Store::get();
+        return view('backend.coupon.create', compact('category', 'store'));
     }
 
     /**
@@ -81,7 +82,7 @@ class CouponController extends Controller
     {
         $category = Category::get();
         $store = Store::get();
-        return view('backend.coupon.edit', compact('coupon','category','store'));
+        return view('backend.coupon.edit', compact('coupon', 'category', 'store'));
     }
 
     /**
@@ -117,6 +118,46 @@ class CouponController extends Controller
             return redirect()->route('admin.coupon.index')->with('error', 'Opps Something went wrong!!');
         }
         return redirect()->route('admin.coupon.index')->with('success', 'Data Deleted Successfully');
+    }
+    // sorting
+    public function sortingCoupon()
+    {
+        return view('backend.coupon.coupon_sorting');
+    }
+    public function selectCoupon()
+    {
+        $coup = Store::get();
+        return view('backend.coupon.sort_coupon')->with(compact('coup'));
+    }
 
+    public function  selectsstores()
+    {
+        $showcoupans = Coupon::where(['store_id' => 0])->get();
+        return view('admin.coupons.show_coupon');
+    }
+    public function reorderCoupans(Request $request)
+    {
+        $request->validate([
+            'ids'   => 'required|array',
+            'ids.*' => 'integer',
+        ]);
+        foreach ($request->ids as $index => $id) {
+            DB::table('coupons')
+                ->where('id', $id)
+                ->update([
+                    'sorting' => $index + 1
+                ]);
+        }
+    }
+    public function selectCouponstore(Request $request)
+    {
+        $store_id = $request->input('store_id');
+        if ($store_id == '') {
+            $products = Coupon::get();
+        } else {
+            $products = Coupon::where(['store_id' =>  $store_id])->orderBy('sorting','asc')->get();
+        }
+        $products;
+        return view('backend.coupon.view_sortingstore')->with(compact('products'));
     }
 }

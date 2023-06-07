@@ -72,14 +72,16 @@ class FrontStoreController extends Controller
     }
 
     public function topvoucher(){
-        // $users = coupon::join('stores', 'stores.store_id', '=', 'coupons.store_id')
-        // ->select(['coupons.*', 'image'])->get();
-        // dd( $users);
+
+        // $users = Coupon::join('stores', 'stores.id', '=', 'coupons.store_id')
+        // ->select(['coupons.*', 'stores.image'])->get();
+
         $showcoupon = DB::table('coupons')
         ->leftJoin('stores','coupons.store_id', '=', 'stores.id')
-        ->select('coupons.*','stores.image as store_image','stores.name')
+        ->select('coupons.*','stores.image as store_image','stores.name','stores.name_from')
         ->where('coupons.top_voucher','1')
-       ->get();
+        ->get();
+
         return view('frontend.top_voucher')->with(compact('showcoupon' ));
     }
 

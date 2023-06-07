@@ -7,6 +7,7 @@
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
                         <h2 class="content-header-title float-left mb-0">Coupon</h2>
+                        <a class="btn btn-primary" href="{{ url('admin/sorting') }}" style="margin-left: 487px;"> Sorting Coupon</a>
                     </div>
                 </div>
             </div>

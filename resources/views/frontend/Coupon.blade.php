@@ -211,25 +211,13 @@
                                                             alt="clock" width="14" height="14"
                                                             loading="lazy" />
                                                         Expiry Date:
-                                                        {{ $coupon->expiry_date }}
-                                                        {{-- {{ $coupon->expiry_date->format('d-m-y') }} --}}
+                                                        {{ date('d-m-Y', strtotime($coupon->expiry_date)) }}
+
                                                     </div>
-                                                    {{-- <div class="pull-right">
-                                                <div class="deal-details-toggle"
-                                                    data-dropdown-trigger=".deal-details">
-                                                    Details
-                                                </div>
-                                            </div> --}}
+
                                                 </div>
                                             </section>
-                                            {{-- <div class="deal-details">
-                                        <div class="deal-details__inner">
-                                            <ul>
-                                                <li>Enjoy a saving of 15% off your order when you add this AEG code at
-                                                    checkout!</li>
-                                            </ul>
-                                        </div>
-                                    </div> --}}
+
                                         </article>
                                     @endforeach
                                 </div>

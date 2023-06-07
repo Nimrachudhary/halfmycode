@@ -9,7 +9,7 @@
             <div class="container no-gap-mobile">
                 <nav class="breadcrumbs pl--md-mobile">
                     <a href="/" target="_self">Halfmycode</a>
-                    <a href="/all-categories" target="_self">Categories</a>
+                    <a href="/all-categories" target="_self">Top Voucher</a>
                     {{-- <span>{{ $category[0]->name }}</span> --}}
                 </nav>
             </div>
@@ -18,22 +18,6 @@
             <section class='pt--xl pt--md-mobile'>
                 <div class='container no-gap-mobile'>
                     <section class='section-content section-content--full'>
-                        {{-- @foreach ($category as $category)
-                            <div class='category-header'>
-                                <h1 class='category-header__title mb'>
-                                    {{ $category->title }}
-                                </h1>
-                                <h2 class='category-header__subtitle font-bold mb--sm'>
-                                    {{ $category->description }}
-                                </h2>
-                                <picture class="category-header__image">
-
-                                    <img class="img-fit-cover" src="{{ asset('images') . '/' . $category->image }}"
-                                        type="image/jpg" alt="Mother's Day Gifts" loading="lazy" width="300"
-                                        height="160" />
-                                </picture>
-                            </div>
-                        @endforeach --}}
                     </section>
                 </div>
             </section>
@@ -61,70 +45,82 @@
                         </div>
                         <div class="section-content__page-content">
                             <div class="filter-button-wrapper mb--xs-mobile mb--lg">
-                                {{-- <div class="filter-button-grid">
-                                    <button class="btn filter-button filter-button--active" data-deals-filter-all>
-                                        All <span class="filter-button__count">({{ count($coupon) }})</span>
-                                    </button>
-                                    <button class="btn filter-button" data-deals-filter-code>
+                                <div class="filter-button-grid">
+                                    {{-- <button class="btn filter-button filter-button--active" data-deals-filter-all>
+                                        All <span class="filter-button__count"></span>
+                                    </button> --}}
+                                    {{-- <button class="btn filter-button" data-deals-filter-code>
                                         Discount Codes <span class="filter-button__count">({{ count($coupon->where('Cupon_type', 'getcode')) }})</span>
                                     </button>
                                     <button class="btn filter-button" data-deals-filter-offer>
                                         Deals <span class="filter-button__count">({{ count($coupon->where('Cupon_type', 'getdeal')) }})</span>
-                                    </button>
-                                </div> --}}
+                                    </button> --}}
+                                </div>
                             </div>
-                            <div class="grid-1">
-                                {{-- @foreach ($coupon as $coupon)
-                                    <article class="merchant-deal" data-dropdown data-deal-code id="2864363">
-                                        <section class="merchant-deal__body">
-                                            <div class="merchant-deal__shoutout">
-                                                <strong>15%</strong> discount
-                                            </div>
-                                            <div class="merchant-deal__content">
-                                                <h3 class="merchant-deal__title">
-                                                    {{ $coupon->description }}
-                                                </h3>
-                                                @if ($coupon->Cupon_type == 'getcode')
-                                                    <div class="merchant-deal__cta copycodebtn">
-                                                        <div class="btn-code btn-code--ribbon" data-code="TR0"
-                                                            data-modal-id="#exampleModal{{ $coupon->id }}
-                                                    data-popup="L2Rpc2NvdW50LWNvZGUtYWVnLmh0bWwjMjg2NDM2Mw&#x3D;&#x3D;"
-                                                            data-out="L2RlYWwvMjg2NDM2My5odG1sP3Q9MTY3NjkxOTA5NjE2NQ&#x3D;&#x3D;"
-                                                            data-sku="UK-2864363" data-pos="1" data-lst="merchant">
-                                                            <span>GET CODE</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                        data-target="#exampleModal">
-                                                        Launch demo modal
-                                                    </button>
-                                                @elseif($coupon->Cupon_type == 'getdeal')
-                                                    <div class="merchant-deal__cta">
-                                                        <div class="btn btn-offer" data-code=""
-                                                            data-popup="L2Rpc2NvdW50LWNvZGUtYWVnLmh0bWwjMjU5ODczNg&#x3D;&#x3D;"
-                                                            data-out="L2RlYWwvMjU5ODczNi5odG1sP3Q9MTY3NjkxOTA5NjIzOA&#x3D;&#x3D;"
-                                                            data-sku="UK-2598736" data-pos="12" data-lst="merchant">
-                                                            <span>GET DEAL</span>
-                                                        </div>
-                                                    </div>
-                                                @endif
-                                            </div>
-                                        </section>
-                                        <section class="merchant-deal__footer">
-                                            <div class="merchant-deal__footer-left">Used 137 times</div>
-                                            <div class="merchant-deal__footer-right">
-                                                <div class="deal-expiraton">
-                                                    <img class="deal-expiraton__icon"
-                                                        src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
-                                                        alt="clock" width="14" height="14" loading="lazy" />
-                                                    Always active
+                            <div class="merchant-deal-wrapper">
+                                <div class="grid-1 grid-gap-half-mobile" id="deals">
+                                    @foreach ($showcoupon as $coupon)
+                                        <article class="merchant-deal" data-dropdown data-deal-code id="2864363">
+                                            <section class="merchant-deal__body">
+                                                <div class="merchant-deal__shoutout">
+                                                    {{-- <strong>15%</strong> discount --}}
+                                                    <picture>
+                                                        <img src="{{ asset('images/' . $coupon->store_image) }}" width="300"
+                                                            height="190" class="img-fluid" fetchpriority="high">
+                                                    </picture>
                                                 </div>
+                                                <div class="merchant-deal__content">
+                                                    <h3 class="merchant-deal__title">
+                                                        {{ $coupon->description }}
+                                                    </h3>
+                                                    @if ($coupon->Cupon_type == 'getcode')
+                                                        <div class="merchant-deal__cta copycodebtn">
+                                                            <a class="btn-code btn-code--ribbon btn-show-code"
+                                                                data-code="{{ $coupon->coupon_code }}"
+                                                                data-modal-id="#exampleModal{{ $coupon->id }}"
+                                                                name="getcode[]" id="{{ $coupon->coupon_code }}"
+                                                                value="{{ $coupon->coupon_code }}"
+                                                                data-affilinkite-link="{{ $coupon->Affilate_Link }}"
+                                                                data-popup="L2Rpc2NvdW50LWNvZGUtYWVnLmh0bWwjMjg2NDM2Mw&#x3D;&#x3D;"
+                                                                data-out="L2RlYWwvMjg2NDM2My5odG1sP3Q9MTY3NjkxOTA5NjE2NQ&#x3D;&#x3D;"
+                                                                data-sku="UK-2864363" data-pos="1" data-lst="merchant">
+                                                                <span style="font-weight: 400;">GET CODE</span>
+                                                            </a>
+                                                        </div>
+                                                    @elseif($coupon->Cupon_type == 'getdeal')
+                                                        <div class="merchant-deal__cta">
+                                                            <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}"
+                                                                target="_blank"
+                                                                data-modal-id="#exampleModal{{ $coupon->id }}"
+                                                                data-sku="UK-2864363" data-pos="1" data-lst="merchant">
+                                                                <span>GET DEAL</span>
+                                                            </a>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </section>
+                                            <section class="merchant-deal__footer">
+                                                <div class="merchant-deal__footer-left"></div>
+                                                <div class="merchant-deal__footer-right">
+                                                    <div class="deal-expiraton">
+                                                        <img class="deal-expiraton__icon"
+                                                            src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
+                                                            alt="clock" width="14" height="14"
+                                                            loading="lazy" />
+                                                        Expiry Date:
 
-                                            </div>
-                                        </section>
-                                    </article>
-                                @endforeach --}}
+                                                        {{ date('d-m-Y', strtotime($coupon->expiry_date)) }}
+
+                                                    </div>
+
+                                                </div>
+                                            </section>
+
+                                        </article>
+                                    @endforeach
+                                </div>
+
+                            </div>
                             </div>
                         </div>
                     </section>
@@ -139,40 +135,7 @@
                                 <section class="section-content section-content--full">
                                     <div class="category-accordion-wrapper">
                                         <div data-accordion>
-                                            {{-- @foreach ($dropdownCategories as $drop)
-                                            <article class="category-accordion" data-dropdown>
 
-                                                <button class="category-accordion__title"
-                                                    data-dropdown-trigger=".category-accordion__content">
-                                                    <img src="https://cdn.bravo-savings-network.com/cdn2/icons/categories/food.svg"
-                                                        width="32" height="32" alt="Food &amp; Drink"
-                                                        class="mr" loading="lazy" />
-                                                        {{ $drop->name }}
-                                                </button>
-                                                <section class="category-accordion__content">
-                                                    <div class="category-accordion__content-inner">
-                                                        <div class="category-accordion__merchants">
-                                                            @foreach ($drop->stores as $dropstore)
-                                                                <a href="/store/{{ $dropstore->slug }}"
-                                                                    class="category-accordion__merchant-box">
-                                                                    <picture
-                                                                        class="category-accordion__merchant-box__logo img-fluid">
-
-                                                                        <img class="category-accordion__merchant-box__logo img-fluid"
-                                                                            src="{{ asset('images/' . $dropstore->image) }}"
-
-                                                                            type="image/png" alt="Virginia Hayward"
-                                                                            loading="lazy" width="90"style="height: 40px;"
-                                                                            height="45" />
-                                                                    </picture>
-                                                                </a>
-                                                            @endforeach
-                                                        </div>
-
-                                                    </div>
-                                                </section>
-                                            </article>
-                                            @endforeach --}}
                                         </div>
                                     </div>
                                 </section>
@@ -230,3 +193,55 @@
 
     </html>
 @endsection
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function() {
+        // alert('nn Copy');
+        $(".btn-show-code").click(function(e) {
+            e.preventDefault();
+
+            // ----- Copy text to clip board code
+            var getcode = $(this).attr('value');
+            var text = getcode;
+            // Create a temporary input element
+            var tempInput = document.createElement('input');
+            // Set the input element's value to the text to be copied
+            tempInput.value = text;
+            // Append the input element to the document
+            document.body.appendChild(tempInput);
+            // Select the text in the input element
+            tempInput.select();
+            // Copy the selected text to the clipboard
+            document.execCommand('copy');
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
+
+            // ----- Open url in new tab
+            var url = $(this).attr('data-affilinkite-link');
+            window.open(url, '_blank');
+
+            // ----- Change span element text
+            $(this).find('span').text('Code Copied');
+
+            // alert('Code Copy');
+            debugger
+        });
+    });
+
+    $(document).on('click', '.btn-show-code', function() {
+        $modal_id = $(this).data('modal-id');
+        $link = $(this).data('affilinkite-link');
+        $($modal_id).modal('show');
+        window.open($link, '_blank');
+
+    });
+    const btn = document.getElementById('copyButton');
+    btn.addEventListener('click', function handleClick() {
+        btn.textContent = 'Code Copied';
+        setTimeout(function() {
+            btn.text('Copy');
+        }, 2000);
+    });
+</script>

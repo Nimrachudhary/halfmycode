@@ -58,6 +58,14 @@ Auth::routes();
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'myCustomAuthMiddleware'], function () {
     Route::post('updatePassword/{user}', [UserController::class, 'updatePassword'])->name('updatePassword');
 
+    Route::get('/sorting', [CouponController::class, 'sortingCoupon']);
+    Route::get('/storecoupon', [CouponController::class, 'selectCoupon']);
+    Route::get('/storeio', [CouponController::class, 'selectCoupon']);
+    
+    Route::get('/couponstores', [CouponController::class, 'selectsstores']);
+    Route::post('/admin/coupons/sorting', [CouponController::class, 'reorderCoupans']);
+    Route::get('/showstorecoupon', [CouponController::class, 'selectCouponstore']);
+
     Route::resources([
         'categories'    =>  CategoryController::class,
         'stores'        =>  StoreController::class,

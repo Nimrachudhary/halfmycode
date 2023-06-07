@@ -1993,7 +1993,7 @@ h5,
 .header-logo {
     max-width: 100%;
     width: 220px;
-    height: 45px;
+    /* height: 45px; */
     font-size: 20px;
     /* background-repeat: no-repeat; */
     text-decoration: none;

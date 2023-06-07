@@ -120,8 +120,8 @@
                         </section>
                     </div>
                 </div>
-                <a style="text-decoration: none" href="/" title="Halfmycode" class="header-logo header-logo--uk"
-                    style="text-decoration: none"><b style="margin: 21px;">HALFMYCODE</b></a>
+                <a style="text-decoration: none;" href="/" title="Halfmycode" class="ml-3 header-logo header-logo--uk"
+                    style="text-decoration: none"><b style="margin: 9px;">HALFMYCODE</b></a>
                 <button class="header-button-search" alt="Search" data-toggle="modal" data-target="#search_modal"
                     aria-label="search">
                     <svg width="24" height="24" viewBox="0 0 515.558 515.558"

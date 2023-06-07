@@ -6,7 +6,7 @@
     <meta name="description" content="Best Saving Promo Code, Deals, Offers at Halfmycode.com">
     <meta name="keywords" content="halfmycode.com">
     <meta http-equiv="content-type" content="text/html ;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="{{ asset('/frontend/style.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://www.googletagmanager.com">

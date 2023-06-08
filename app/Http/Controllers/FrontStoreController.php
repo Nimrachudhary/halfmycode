@@ -22,9 +22,7 @@ class FrontStoreController extends Controller
     public function coupon($id)
     {
         $store = Store::where('slug', $id)->get();
-        // dd($store);
-        // $showcoupon = coupon::where('store_id', $showsstore[0]->id)->orderby('position')->get();
-        $coupon = Coupon::where('store_id', $store[0]->id)->get();
+        $coupon = Coupon::where('store_id', $store[0]->id)->orderby('sorting')->get();
         return view('frontend.Coupon',compact('coupon','store') );
     }
 
@@ -62,7 +60,15 @@ class FrontStoreController extends Controller
         $blogs = Blog::all();
         $weeks = Coupon::with(['store'])->get();
         $coupons = Coupon::with(['store'])->limit(3)->get();
-        return view('welcome', compact('blogs','dropdownCategories','coupons','weeks'));
+
+        $showcoupon = DB::table('coupons')
+        ->leftJoin('stores','coupons.store_id', '=', 'stores.id')
+        ->select('coupons.*','stores.image as store_image','stores.name','stores.name_from')
+        ->where('coupons.top_voucher','1')
+        ->limit(4)
+        ->get();
+        return view('welcome', compact('blogs','dropdownCategories',
+        'coupons','weeks','showcoupon'));
     }
 
     public function  searchStores(Request $req)

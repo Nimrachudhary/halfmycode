@@ -353,7 +353,7 @@
                                         <div class="weekly-deal__header">
                                             <picture>
 
-                                                <img src="{{ asset('images') . '/' . $coupon->image }}" type="image/jpeg"
+                                                <img src="{{ asset('images') . '/' . $value->image }}" type="image/jpeg"
                                                     alt="Marriott" loading="lazy" />
                                             </picture>
                                         </div>
@@ -362,12 +362,10 @@
                                                 <a href="/store/{{ $value->store->slug }}" class="weekly-deal__logo"
                                                     title="">
                                                     <picture class="">
-                                                        <source
-                                                            srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/marriott-bonvoy-20220211091551-logo.webp, https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/marriott-bonvoy-20220211091551-logo@2x.webp 2x"
-                                                            type="image/webp">
+
                                                         <img class=""
                                                             src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                            srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/marriott-bonvoy-20220211091551-logo@2x.png 2x"
+
                                                             type="image/png" alt="Marriott" loading="lazy"
                                                             width="90" height="45" />
 
@@ -398,125 +396,63 @@
                     <div class="mixed-deal-wrapper mixed-deal-wrapper--home pt--xxl pb--xxl">
                         <div class="grid-1 grid-2-md grid-align-top">
                             <!-- DEAL WITH LOGO CODE ACTIVE -->
+                            @foreach ($showcoupon as $coupon)
                             <article class="mixed-deal mixed-deal--exclusive" data-exclusive-label="Exclusive"
                                 data-dropdown data-deal-exclusive data-deal-code>
                                 <div class="mixed-deal__header">
                                     <div class="mixed-deal__logo">
                                         <picture class="img-fit-center">
-                                            <source
-                                                srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/warrior-20210112160923-logo.webp, https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/warrior-20210112160923-logo@2x.webp 2x"
-                                                type="image/webp">
                                             <img class="img-fit-center"
-                                                src="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/warrior-20210112160923-logo.png"
-                                                srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/warrior-20210112160923-logo@2x.png"
+                                                src="{{ asset('images/' . $coupon->store_image) }}"
                                                 type="image/png" alt="Warrior" width="150" height="75"
                                                 loading="lazy" />
                                         </picture>
                                     </div>
                                     <div class="mixed-deal__content">
                                         <p class="mixed-deal__title">
-                                            EXCLUSIVE Warrior discount code: 25% off sitewide
+                                            {{ $coupon->coupon_title }}
                                         </p>
                                         <div>
-                                            <div class="pull-right mb--xs">
-                                                <div class="deal-details-toggle" data-dropdown-trigger=".deal-details">
-                                                    Details
-                                                </div>
-                                            </div>
                                             <div>
-                                                <!-- toggle class: .deal-details--open -->
-                                                <div class="deal-details">
-                                                    <div class="deal-details__inner">
-                                                        <ul>
-                                                            <li>Save 25% off your order with our exclusive code for
-                                                                Warrior.</li>
-                                                        </ul>
+                                                    @if ($coupon->Cupon_type == 'getcode')
+                                                    <div class="merchant-deal__cta copycodebtn">
+                                                        <a class="btn-code btn-code--ribbon btn-show-code"
+                                                            data-code="{{ $coupon->coupon_code }}"
+                                                            data-modal-id="#exampleModal{{ $coupon->id }}"
+                                                            name="getcode[]" id="{{ $coupon->coupon_code }}"
+                                                            value="{{ $coupon->coupon_code }}"
+                                                            data-affilinkite-link="{{ $coupon->Affilate_Link }}"
+                                                            data-popup="L2Rpc2NvdW50LWNvZGUtYWVnLmh0bWwjMjg2NDM2Mw&#x3D;&#x3D;"
+                                                            data-out="L2RlYWwvMjg2NDM2My5odG1sP3Q9MTY3NjkxOTA5NjE2NQ&#x3D;&#x3D;"
+                                                            data-sku="UK-2864363" data-pos="1" data-lst="merchant">
+                                                            <span style="font-weight: 400;">GET CODE</span>
+                                                        </a>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="btn-code btn-code--ribbon" data-code="V2R"
-                                                    data-popup="L2Rpc2NvdW50LWNvZGUtd2Fycmlvci5odG1sIzI2NDEyNjQ&#x3D;"
-                                                    data-out="L2RlYWwvMjY0MTI2NC5odG1sP3Q9MTY2OTE0NTc2NTM3MQ&#x3D;&#x3D;"
-                                                    data-sku="UK-2641264" data-pos="1" data-lst="home">
-                                                    <span>GET CODE</span>
-                                                </div>
+                                                @elseif($coupon->Cupon_type == 'getdeal')
+                                                    <div class="merchant-deal__cta">
+                                                        <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}"
+                                                            target="_blank"
+                                                            data-modal-id="#exampleModal{{ $coupon->id }}"
+                                                            data-sku="UK-2864363" data-pos="1" data-lst="merchant">
+                                                            <span>GET DEAL</span>
+                                                        </a>
+                                                    </div>
+                                                @endif
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mixed-deal__merchant">
-                                    <a href="/discount-code-warrior.html">View all Warrior discount codes</a>
-                                </div>
                                 <div class="mixed-deal__footer">
-                                    <div>Used 212 times</div>
                                     <div class="deal-expiraton">
                                         <img class="deal-expiraton__icon"
                                             src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
                                             alt="clock" width="14" height="14" loading="lazy" />
-                                        Expires on 01/01/2023
+                                        Expires on   {{ date('d-m-Y', strtotime($coupon->expiry_date)) }}
                                     </div>
                                 </div>
                             </article> <!-- DEAL WITH LOGO CODE ACTIVE -->
-                            <article class="mixed-deal mixed-deal--exclusive" data-exclusive-label="Exclusive"
-                                data-dropdown data-deal-exclusive data-deal-code>
-                                <div class="mixed-deal__header">
-                                    <div class="mixed-deal__logo">
-                                        <picture class="img-fit-center">
-                                            <source
-                                                srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/sephora-20221017121526-logo.webp, https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/sephora-20221017121526-logo@2x.webp 2x"
-                                                type="image/webp">
-                                            <img class="img-fit-center"
-                                                src="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/sephora-20221017121526-logo.png"
-                                                srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/sephora-20221017121526-logo@2x.png"
-                                                type="image/png" alt="Sephora" width="150" height="75"
-                                                loading="lazy" />
-                                        </picture>
-                                    </div>
-                                    <div class="mixed-deal__content">
-                                        <p class="mixed-deal__title">
-                                            EXCLUSIVE Sephora discount code: 20% off full-price Items
-                                        </p>
-                                        <div>
-                                            <div class="pull-right mb--xs">
-                                                <div class="deal-details-toggle" data-dropdown-trigger=".deal-details">
-                                                    Details
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <!-- toggle class: .deal-details--open -->
-                                                <div class="deal-details">
-                                                    <div class="deal-details__inner">
-                                                        <ul>
-                                                            <li>Take 20% off your order using this exclusive code!</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="btn-code btn-code--ribbon" data-code="OV2"
-                                                    data-popup="L2Rpc2NvdW50LWNvZGUtc2VwaG9yYS5odG1sIzI2NzA0NDY&#x3D;"
-                                                    data-out="L2RlYWwvMjY3MDQ0Ni5odG1sP3Q9MTY2OTE0NTc2NTM3Mw&#x3D;&#x3D;"
-                                                    data-sku="UK-2670446" data-pos="2" data-lst="home">
-                                                    <span>GET CODE</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mixed-deal__merchant">
-                                    <a href="/discount-code-sephora.html">View all Sephora discount codes</a>
-                                </div>
-                                <div class="mixed-deal__footer">
-                                    <div>Used 453 times</div>
-                                    <div class="deal-expiraton">
-                                        <img class="deal-expiraton__icon"
-                                            src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
-                                            alt="clock" width="14" height="14" loading="lazy" />
-                                        Expires in 5 days
-                                    </div>
-                                </div>
-                            </article>
+@endforeach
                         </div>
                     </div>
                 </section>
@@ -962,7 +898,6 @@
                         <div data-accordion>
                             @foreach ($dropdownCategories as $drop)
                                 <article class="category-accordion" data-dropdown>
-
                                     <button class="category-accordion__title"
                                         data-dropdown-trigger=".category-accordion__content">
                                         <img src="https://cdn.bravo-savings-network.com/cdn2/icons/categories/food.svg"
@@ -1222,3 +1157,56 @@
         </section>
     </main>
 @endsection
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function() {
+        // alert('nn Copy');
+        $(".btn-show-code").click(function(e) {
+            e.preventDefault();
+
+            // ----- Copy text to clip board code
+            var getcode = $(this).attr('value');
+            var text = getcode;
+            // Create a temporary input element
+            var tempInput = document.createElement('input');
+            // Set the input element's value to the text to be copied
+            tempInput.value = text;
+            // Append the input element to the document
+            document.body.appendChild(tempInput);
+            // Select the text in the input element
+            tempInput.select();
+            // Copy the selected text to the clipboard
+            document.execCommand('copy');
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
+
+            // ----- Open url in new tab
+            var url = $(this).attr('data-affilinkite-link');
+            window.open(url, '_blank');
+
+            // ----- Change span element text
+            $(this).find('span').text('Code Copied');
+
+            // alert('Code Copy');
+            debugger
+        });
+    });
+
+    $(document).on('click', '.btn-show-code', function() {
+        $modal_id = $(this).data('modal-id');
+        $link = $(this).data('affilinkite-link');
+        $($modal_id).modal('show');
+        window.open($link, '_blank');
+
+    });
+    const btn = document.getElementById('copyButton');
+    btn.addEventListener('click', function handleClick() {
+        btn.textContent = 'Code Copied';
+        setTimeout(function() {
+            btn.text('Copy');
+        }, 2000);
+    });
+</script>
+

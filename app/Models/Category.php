@@ -10,7 +10,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Category extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','title', 'description', 'status', 'image', 'slug','is_featured','logo'];
+    protected $fillable = ['name','title', 'description', 'status', 'image', 'slug','is_featured'];
 
     public function stores()
     {

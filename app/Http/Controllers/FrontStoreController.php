@@ -37,6 +37,7 @@ class FrontStoreController extends Controller
     }
     public function subblog($id)
     {
+        
         $showsblog = Blog::where('slug', $id)->get();
         return view('frontend.detail-blog',compact('showsblog'));
     }

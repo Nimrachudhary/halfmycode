@@ -61,38 +61,16 @@
                         <div class="category-accordion-wrapper">
                             <p class="h1 mb">Special events</p>
                             <div class="grid-1 grid-3-md">
-                                <a href="/special/womens-day-deals.html" class="latest-event">
-                                    <picture class="latest-event__image">
-                                        <source
-                                            srcset="https://cdn.bravo-savings-network.com/cdn2/events/md/womens-day.webp"
-                                            type="image/webp">
-                                        <img class="img-fit-cover"
-                                            src="https://cdn.bravo-savings-network.com/cdn2/events/md/womens-day.jpg"
-                                            type="image/jpg" alt="Women's Day" loading="lazy" width="300"
-                                            height="160" />
-                                    </picture> <span class="latest-event__name">Women&#x27;s Day</span>
-                                    <span class="latest-event__bar"></span>
-                                </a> <a href="/special/easter.html" class="latest-event">
-                                    <picture class="latest-event__image">
-                                        <source srcset="https://cdn.bravo-savings-network.com/cdn2/events/md/easter.webp"
-                                            type="image/webp">
-                                        <img class="img-fit-cover"
-                                            src="https://cdn.bravo-savings-network.com/cdn2/events/md/easter.jpg"
-                                            type="image/jpg" alt="Easter Offers" loading="lazy" width="300"
-                                            height="160" />
-                                    </picture> <span class="latest-event__name">Easter Offers</span>
-                                    <span class="latest-event__bar"></span>
-                                </a> <a href="/special/half-term-uk-deals.html" class="latest-event">
-                                    <picture class="latest-event__image">
-                                        <source srcset="https://cdn.bravo-savings-network.com/cdn2/events/md/half-term.webp"
-                                            type="image/webp">
-                                        <img class="img-fit-cover"
-                                            src="https://cdn.bravo-savings-network.com/cdn2/events/md/half-term.jpg"
-                                            type="image/jpg" alt="Half Term Deals" loading="lazy" width="300"
-                                            height="160" />
-                                    </picture> <span class="latest-event__name">Half Term Deals</span>
-                                    <span class="latest-event__bar"></span>
-                                </a>
+                                @foreach ($special_events as $event)
+                                    <a href="/specials/{{ $event->slug }}" class="latest-event">
+                                        <picture class="latest-event__image">
+                                            <img class="img-fit-cover" src="{{ asset('images') . '/' . $event->image }}"
+                                                type="image/jpg" alt="Cyber Monday Sales" loading="lazy" width="300"
+                                                height="160" />
+                                        </picture> <span class="latest-event__name">{{ $event->name }}</span>
+                                        <span class="latest-event__bar"></span>
+                                    </a>
+                                @endforeach
                             </div>
                         </div>
                     </section>

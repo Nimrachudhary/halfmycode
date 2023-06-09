@@ -37,7 +37,7 @@
                     </section>
                 </div>
             </section>
-            <section class="mt">
+            {{-- <section class="mt">
                 <div class="container no-gap-mobile fluid-tablet">
                     <section class="section-content section-content--full">
                         <div id="slider-event-body" class="weekly-deal-wrapper has-bg">
@@ -1228,7 +1228,7 @@
         <script src="/deal.ecec0443d82340bde583.js" async defer></script>
         <link href="/additional.609e4b424f26855115e1.css" rel="stylesheet" media="print"
             onload="this.media='all'" />
-    </body>
+    </body> --}}
 
     </html>
 @endsection

@@ -22,9 +22,7 @@
                                 <div class="all-categories-item">
                                     <a href="/categories/{{ $category->slug }}">
                                         <picture class="all-categories-item__image">
-                                            {{-- <source srcset="https://cdn.bravo-savings-network.com/cdn2/category/sm/clothing.webp" type="image/webp"> --}}
-
-                                                {{-- <img src="{{ asset('images') . '/' . $categorie->image }}"class="img-responsive lazy" /> --}}
+                                          
                                             <img class="all-categories-item__image" src="{{ asset('images') . '/' . $category->image }}" type="image/jpg" alt="Clothing" loading="lazy" width="270" height="140" />
                                         </picture>
                                         <h3 class="all-categories-item__name">{{ $category->name }}</h3>

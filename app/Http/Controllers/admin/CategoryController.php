@@ -53,6 +53,11 @@ class CategoryController extends Controller
             $request->image->move(public_path('images'), $imageName);
             $validated['image'] =  $imageName;
         }
+        // if (isset($request->logo)  && ($request->logo->extension() != '')) {
+        //     $imageName = rand(0, 999999999) . time() . '.' . $request->logo->extension();
+        //     $request->logo->move(public_path('logo'), $imageName);
+        //     $validated['logo'] =  $imageName;
+        // }
         $category = Category::create($validated);
         return redirect()->route('admin.categories.index')->with('success', 'Data Saved Successfully');
     }

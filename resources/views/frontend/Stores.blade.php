@@ -1,7 +1,5 @@
 @extends('layouts.frontend.app')
 @section('front-content')
-
-
         <div class='area area--sub-header'>
             <div class="container no-gap-mobile">
                 <nav class="breadcrumbs pl--md-mobile">
@@ -20,12 +18,9 @@
                                 @foreach ($store as $store)
                                 <a href="/store/{{ $store->slug }}" class="merchant-box">
                                     <picture class="merchant-box__logo">
-                                        {{-- <source srcset="{{ asset('images') . '/' . $store->image }}" type="image/webp"> --}}
                                         <img class="merchant-box__logo" src="{{ asset('images') . '/' . $store->image }}"
-                                            {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/md/aliexpress-20181114151639-logo@2x.png" --}}
                                             type="image/png" alt="" width="150" height="75" style="height: 150px;"
                                             loading="lazy" />
-                                            {{-- <img src="{{ asset('images') . '/' . $store->image }}"class="img-responsive lazy" /> --}}
                                     </picture>
                                     <span class="merchant-box__name">
                                         <strong class="font-bold">{{ $store->name }}</strong>

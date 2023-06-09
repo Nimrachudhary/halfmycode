@@ -68,6 +68,13 @@
                                             <label class="custom-file-label" for="customFile1">Choose image</label>
                                         </div>
                                     </div>
+                                    {{-- <div class="form-group">
+                                        <label for="customFile1">Logo</label>
+                                        <div class="custom-file">
+                                            <input type="file" name="logo" class="custom-file-input" id="customFile1"  />
+                                            <label class="custom-file-label" for="customFile1">Choose logo</label>
+                                        </div>
+                                    </div> --}}
 
                                     <div class="form-group">
                                         <label class="d-block" for="validationBioBootstrap">Description</label>
@@ -79,7 +86,7 @@
                                         <label for="is_featured">Featured</label><br>
                                     </div>
 
-                                   
+
                                     {{-- <div class="form-group">
                                         <label class="d-block">Status</label>
                                         <div class="custom-control custom-radio my-50">

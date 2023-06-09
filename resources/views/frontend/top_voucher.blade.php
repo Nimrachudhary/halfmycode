@@ -29,16 +29,7 @@
                             <div class="mb--lg">
                                 <div class="grid-scroller-mobile-helper">
                                     <div class="grid-3 grid-scroller-mobile pb--xs">
-                                        {{-- @foreach ($store as $store)
-                                            <a href="/store/{{ $store->slug }}" class="merchant-box">
-                                                <picture class="merchant-box__logo">
-                                                    <img class="merchant-box__logo"
-                                                        src="{{ asset('images') . '/' . $store->image }}" type="image/png"
-                                                        alt="" loading="lazy" width="90" height="45" />
-                                                </picture>
-                                                <span class="merchant-box__name break-word">{{ $store->name }}</span>
-                                            </a>
-                                        @endforeach --}}
+
                                     </div>
                                 </div>
                             </div>
@@ -46,15 +37,7 @@
                         <div class="section-content__page-content">
                             <div class="filter-button-wrapper mb--xs-mobile mb--lg">
                                 <div class="filter-button-grid">
-                                    {{-- <button class="btn filter-button filter-button--active" data-deals-filter-all>
-                                        All <span class="filter-button__count"></span>
-                                    </button> --}}
-                                    {{-- <button class="btn filter-button" data-deals-filter-code>
-                                        Discount Codes <span class="filter-button__count">({{ count($coupon->where('Cupon_type', 'getcode')) }})</span>
-                                    </button>
-                                    <button class="btn filter-button" data-deals-filter-offer>
-                                        Deals <span class="filter-button__count">({{ count($coupon->where('Cupon_type', 'getdeal')) }})</span>
-                                    </button> --}}
+
                                 </div>
                             </div>
                             <div class="merchant-deal-wrapper">
@@ -63,7 +46,7 @@
                                         <article class="merchant-deal" data-dropdown data-deal-code id="2864363">
                                             <section class="merchant-deal__body">
                                                 <div class="merchant-deal__shoutout">
-                                                    {{-- <strong>15%</strong> discount --}}
+                                                  
                                                     <picture>
                                                         <img src="{{ asset('images/' . $coupon->store_image) }}" width="300"
                                                             height="190" class="img-fluid" fetchpriority="high">

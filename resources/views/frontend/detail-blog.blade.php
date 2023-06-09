@@ -27,9 +27,6 @@
                                     </div>
                                     <div class="blog-post__image mb--lg">
                                         <picture class="">
-                                            {{-- <source
-                                        srcset="https://cdn.bravo-savings-network.com/cdn2/blog/xl/make-mothers-day-2019-memorable-202102171357-preview.webp"
-                                        type="image/webp"> --}}
                                             <img class="" src="{{ asset('images') . '/' . $blogsdetail->image }}"
                                                 type="image/jpeg" alt="Make Mother’s Day memorable" loading="lazy"
                                                 width="750" height="300" />

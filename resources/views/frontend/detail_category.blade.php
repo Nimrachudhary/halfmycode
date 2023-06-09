@@ -27,8 +27,7 @@
                                     {{ $category->description }}
                                 </h5>
                                 <picture class="category-header__image">
-                                    {{-- <source srcset="https://cdn.bravo-savings-network.com/cdn2/events/md/mothers-day.webp"
-                                    type="image/webp"> --}}
+                                 
                                     <img class="img-fit-cover" src="{{ asset('images') . '/' . $category->image }}"
                                         type="image/jpg" alt="Mother's Day Gifts" loading="lazy" width="300"
                                         height="160" />
@@ -66,9 +65,7 @@
                                     <button class="btn filter-button filter-button--active" data-deals-filter-all>
                                         All <span class="filter-button__count">({{ count($coupon) }})</span>
                                     </button>
-                                    {{-- <button class="btn filter-button" data-deals-filter-exclusive>
-                                        Exclusive <span class="filter-button__count">(9)</span>
-                                    </button> --}}
+
                                     <button class="btn filter-button" data-deals-filter-code>
                                         Discount Codes <span class="filter-button__count">({{ count($coupon->where('Cupon_type', 'getcode')) }})</span>
                                     </button>
@@ -129,22 +126,10 @@
                                                         alt="clock" width="14" height="14" loading="lazy" />
                                                     Always active
                                                 </div>
-                                                {{-- <div class="pull-right">
-                                                <div class="deal-details-toggle"
-                                                    data-dropdown-trigger=".deal-details">
-                                                    Details
-                                                </div>
-                                            </div> --}}
+
                                             </div>
                                         </section>
-                                        {{-- <div class="deal-details">
-                                        <div class="deal-details__inner">
-                                            <ul>
-                                                <li>Enjoy a saving of 15% off your order when you add this AEG code at
-                                                    checkout!</li>
-                                            </ul>
-                                        </div>
-                                    </div> --}}
+
                                     </article>
                                 @endforeach
                             </div>
@@ -179,12 +164,9 @@
                                                                     class="category-accordion__merchant-box">
                                                                     <picture
                                                                         class="category-accordion__merchant-box__logo img-fluid">
-                                                                        {{-- <source
-                                                                            srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/virginia-hayward-20201203091432-logo.webp, https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/virginia-hayward-20201203091432-logo@2x.webp 2x"
-                                                                            type="image/webp"> --}}
+
                                                                         <img class="category-accordion__merchant-box__logo img-fluid"
                                                                             src="{{ asset('images/' . $dropstore->image) }}"
-                                                                            {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/virginia-hayward-20201203091432-logo@2x.png 2x" --}}
                                                                             type="image/png" alt="Virginia Hayward"
                                                                             loading="lazy" width="90"style="height: 40px;"
                                                                             height="45" />

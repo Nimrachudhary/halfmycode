@@ -47,7 +47,8 @@
                                                     </a>
                                                 </h2>
                                                 <div class='blog-card__footer'>
-                                                    <div class='blog-card__date'> {{ $blog->date }}</div>
+                                                    <div class='blog-card__date'>
+                                                        {{ date('d-m-Y', strtotime($blog->date)) }}</div>
 
                                                 </div>
                                             </div>
@@ -62,35 +63,6 @@
                     </section>
                 </div>
             </section>
-            {{-- <section class="mt--xl">
-                <div class="container">
-                    <section class="section-content section-content--full">
-                        <div class="pagination">
-                            <a class="pagination__link pagination__nav--disabled" href='/blog'>
-                                <svg width="10" height="18" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M1 9.991l6.502 7.414c.414.472 1.085.472 1.498 0a1.33 1.33 0 000-1.708l-5.754-6.56L9 2.579A1.33 1.33 0 009 .871C8.587.399 7.916.399 7.502.87L1 8.284c-.207.236-.31.545-.31.854 0 .309.103.618.31.853z"
-                                        fill="currentColor" fill-rule="nonzero"></path>
-                                </svg>
-                            </a>
-
-                            <a href="/blog" class="pagination__link pagination__current">1</a>
-
-                            <a href="?page&#x3D;2" class="pagination__link ">2</a>
-
-                            <a href="?page&#x3D;3" class="pagination__link ">3</a>
-
-                            <a class="pagination__link " href='?page&#x3D;2'>
-                                <svg width="10" height="18" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9 8.284L2.498.871C2.084.4 1.413.4 1 .871a1.33 1.33 0 000 1.707l5.754 6.56L1 15.698a1.33 1.33 0 000 1.707c.413.472 1.084.472 1.498 0L9 9.992c.207-.236.31-.545.31-.854 0-.309-.103-.618-.31-.854z"
-                                        fill="currentColor" fill-rule="nonzero"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </section>
-                </div>
-            </section> --}}
             @include('frontend.recently_update_brand')
             <section class="mt--xxl">
                 <div class="newsletter-signup-wrapper">

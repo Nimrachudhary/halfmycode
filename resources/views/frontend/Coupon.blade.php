@@ -1,8 +1,6 @@
 @extends('layouts.frontend.app')
 @section('front-content')
-
     <body class="template">
-
         <div class="area area--over-header">
         </div>
         <div class="area area--sub-header">
@@ -23,7 +21,6 @@
                         <section class="section-content section-content--full">
                             <div class="section-content__page-content">
                                 <div class="merchant-header">
-                                    {{-- <a href="{{ $store->affilite_link }}"> --}}
                                     <div class="merchant-header__logo">
                                         <a href="{{ $store->affilite_link }}" target="_blank">
                                             <picture>
@@ -32,7 +29,6 @@
                                             </picture>
                                         </a>
                                     </div>
-                                    {{-- </a> --}}
                                     <div class="merchant-header__text">
                                         <h1 class="merchant-header__title">
                                             {{ $store->name }}
@@ -127,18 +123,6 @@
                                                 Instagram
                                             </a>
                                         @endif
-                                        {{-- @if ($value->key == 'youtube')
-                                            <a href="{{ $value->value }}" rel="nofollow noopener" target="_blank">
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="20"
-                                                    viewBox="0 0 640 450">
-                                                    <path
-                                                        d="M626.813 71.035c-7.375-27.418-28.993-49.031-56.407-56.414C520.324.918 319.992.918 319.992.918s-200.324 0-250.406 13.184c-26.887 7.375-49.031 29.52-56.406 56.933C0 121.113 0 224.97 0 224.97s0 104.379 13.18 153.933c7.383 27.414 28.992 49.028 56.41 56.41C120.195 449.02 320 449.02 320 449.02s200.324 0 250.406-13.184c27.418-7.379 49.032-28.992 56.414-56.406C640 329.348 640 225.496 640 225.496s.524-104.383-13.187-154.46zM256.21 320.915V129.022l166.586 95.946-166.586 95.945z"
-                                                        fill="currentColor" />
-                                                </svg>
-
-                                                Youtube
-                                            </a>
-                                        @endif --}}
                                     @endforeach
                                 </div>
                             </div>
@@ -166,7 +150,6 @@
                                         <article class="merchant-deal" data-dropdown data-deal-code id="2864363">
                                             <section class="merchant-deal__body">
                                                 <div class="merchant-deal__shoutout">
-                                                    {{-- <strong>15%</strong> discount --}}
                                                     <picture>
                                                         <img src="{{ asset('images/' . $store->image) }}" width="300"
                                                             height="190" class="img-fluid" fetchpriority="high">
@@ -244,7 +227,6 @@
                             <div class="container no-gap-mobile">
                                 <nav class="breadcrumbs pl--md-mobile">
                                     <a href="/" target="_self">Halfmycode</a>
-                                    {{-- <a href="/category-appliances.html" target="_self">Appliances</a> --}}
                                     <span> {{ $store->name }}</span>
                                 </nav>
                             </div>
@@ -274,8 +256,6 @@
             {{-- end --}}
             <section class="pt--xxs-mobile pl--md overflow-hidden hidden-desktop">
             </section>
-
-
             <section class="mt--xxl">
                 <div class="container">
                     <section class="section-content section-content--full">
@@ -344,31 +324,8 @@
                                         </a>
                                     @endif
                                 @endforeach
-                                {{-- <a href="https://www.youtube.com/user/AEG" rel="nofollow noopener" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 640 450">
-                                        <path
-                                            d="M626.813 71.035c-7.375-27.418-28.993-49.031-56.407-56.414C520.324.918 319.992.918 319.992.918s-200.324 0-250.406 13.184c-26.887 7.375-49.031 29.52-56.406 56.933C0 121.113 0 224.97 0 224.97s0 104.379 13.18 153.933c7.383 27.414 28.992 49.028 56.41 56.41C120.195 449.02 320 449.02 320 449.02s200.324 0 250.406-13.184c27.418-7.379 49.032-28.992 56.414-56.406C640 329.348 640 225.496 640 225.496s.524-104.383-13.187-154.46zM256.21 320.915V129.022l166.586 95.946-166.586 95.945z"
-                                            fill="currentColor" />
-                                    </svg>
-                                    Youtube
-                                </a> --}}
                             </div>
                         </section>
-
-                        {{-- <section class="mt--xxl">
-                        <div class="container">
-                            <section class="section-content section-content--full">
-                                <div class="latest-merchant-wrapper">
-                                    <p class="h1 mb--lg">Similar Brands</p>
-                                    <div class="tag-link-grid">
-                                        <a href="/discount-code-renogy.html" class="tag-link"title='Discount Code Renogy'>Renogy</a>
-                                        <a href="/discount-code-zanussi.html" class="tag-link"title='Discount Code Zanussi'>Zanussi</a>
-                                        <a href="/discount-code-hughes-rental.html" class="tag-link"title='Discount Code Hughes Rental'>Hughes Rental</a>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </section> --}}
                         @include('frontend.recently_update_brand')
                     </section>
                 </div>
@@ -411,11 +368,7 @@
                     </div>
                 </section>
             </section>
-
         </main>
-    </body>
-
-    </html>
 @endsection
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
     integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="

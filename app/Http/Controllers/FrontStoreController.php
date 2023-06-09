@@ -16,7 +16,6 @@ class FrontStoreController extends Controller
     public function stores(Request $request)
     {
         $store = Store::orderBy('name')->get();
-        // $products = store::orderBy('name')->get();
         return view('frontend.Stores', compact('store'));
     }
     public function coupon($id)
@@ -57,7 +56,7 @@ class FrontStoreController extends Controller
             $category->stores = $category->stores->take(20);
             return $category;
           });
-        $blogs = Blog::all();
+        $blogs = Blog::limit(5)->get();
         $weeks = Coupon::with(['store'])->get();
         $coupons = Coupon::with(['store'])->limit(3)->get();
 

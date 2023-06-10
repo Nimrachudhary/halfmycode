@@ -368,6 +368,7 @@
                     </div>
                 </section>
             </section>
+            @include('frontend.footer_icone_stats')
         </main>
 @endsection
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"

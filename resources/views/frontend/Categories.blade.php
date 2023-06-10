@@ -37,24 +37,7 @@
             </div>
         </section>
 
-        <section class="mt--lg">
-            <div class="container">
-                <section class="section-content section-content--full">
-                    <div class="latest-merchant-wrapper">
-                        <p class="h2 mb--lg">Recently updated brands</p>
-                        <div class="tag-link-grid">
-                            <a href="/discount-code-vans.html" class="tag-link"
-                                title='Discount Code Vans'>Vans</a>
-                                <a href="/discount-code-mobilescouk.html"
-                                class="tag-link" title='Discount Code Mobiles.co.uk'>Mobiles.co.uk</a>
-                                <a
-                                href="/discount-code-the-works.html" class="tag-link"
-                                title='Discount Code The Works'>The Works</a>
-                            </div>
-                    </div>
-                </section>
-            </div>
-        </section>
+        @include('frontend.recently_update_brand')
 
         @include('frontend.footer_icone_stats')
     </main>

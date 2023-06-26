@@ -192,7 +192,7 @@
                                                         <img class="deal-expiraton__icon"
                                                             src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
                                                             alt="clock" width="14" height="14"
-                                                            loading="lazy" />
+                                                           />
                                                         Expiry Date:
                                                         {{ date('d-m-Y', strtotime($coupon->expiry_date)) }}
 
@@ -210,7 +210,7 @@
                                 <div class="modal-body">
                                     <button class="modal-close" data-modal-closer>
                                         <img src="https://cdn.bravo-savings-network.com/cdn2/icons/close-o.svg"
-                                            width="30" height="30" alt="Close" loading="lazy" />
+                                            width="30" height="30"  />
                                     </button>
                                     <div id="popup-body"></div>
                                 </div>

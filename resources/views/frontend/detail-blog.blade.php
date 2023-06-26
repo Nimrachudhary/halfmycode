@@ -28,7 +28,7 @@
                                     <div class="blog-post__image mb--lg">
                                         <picture class="">
                                             <img class="" src="{{ asset('images') . '/' . $blogsdetail->image }}"
-                                                type="image/jpeg" alt="Make Mother’s Day memorable" loading="lazy"
+                                                type="image/jpeg"
                                                 width="750" height="300" />
                                         </picture>
                                     </div>
@@ -65,7 +65,7 @@
                                     <a href="/specials/{{ $event->slug }}" class="latest-event">
                                         <picture class="latest-event__image">
                                             <img class="img-fit-cover" src="{{ asset('images') . '/' . $event->image }}"
-                                                type="image/jpg" alt="Cyber Monday Sales" loading="lazy" width="300"
+                                                type="image/jpg" width="300"
                                                 height="160" />
                                         </picture> <span class="latest-event__name">{{ $event->name }}</span>
                                         <span class="latest-event__bar"></span>

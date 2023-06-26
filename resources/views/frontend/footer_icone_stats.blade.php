@@ -6,7 +6,7 @@
                 <div class="our-numbers-grid">
                     <!-- item -->
                     <div class="our-number">
-                        <img src="{{ asset('images/footeruser.jpeg') }}" alt="icon users" loading="lazy"
+                        <img src="{{ asset('images/footeruser.jpeg') }}"
                             class="img-fluid " width="174"height="140" />
                         <div class="our-number__text">
                             <strong>4,000,000</strong>
@@ -15,7 +15,7 @@
                     </div>
                     <!-- item -->
                     <div class="our-number">
-                        <img src="{{ asset('images/footerbrand.jpeg') }}" alt="icon boutiques" loading="lazy"
+                        <img src="{{ asset('images/footerbrand.jpeg') }}"
                             class="img-fluid our-number__img" width="174" height="140" />
                         <div class="our-number__text">
                             <strong>6,000+</strong>
@@ -24,7 +24,7 @@
                     </div>
                     <!-- item -->
                     <div class="our-number">
-                        <img src="{{ asset('images/coupons.jpeg') }}" alt="icon codes" loading="lazy"
+                        <img src="{{ asset('images/coupons.jpeg') }}" 
                             class="img-fluid our-number__img" width="174" height="140" />
                         <div class="our-number__text">
                             <strong>150,000+</strong>
@@ -34,7 +34,7 @@
 
                     <!-- item -->
                     <div class="our-number">
-                        <img src="{{ asset('images/verified.jpeg') }}" alt="icon verified" loading="lazy"
+                        <img src="{{ asset('images/verified.jpeg') }}"
                             class="img-fluid our-number__img" width="174" height="140" />
                         <div class="our-number__text">
                             <strong>98%</strong>

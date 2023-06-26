@@ -23,7 +23,7 @@
                                     <div class="premium-offer__media">
                                         <picture class="img-fit-cover">
                                             <img class="img-fit-cover" src="{{ asset('images') . '/' . $coupon->image }}"
-                                                type="image/jpeg" alt="Yours Clothing" loading="lazy" width="300"
+                                                type="image/jpeg"   width="300"
                                                 height="250" />
                                         </picture>
                                     </div>
@@ -34,7 +34,7 @@
                                                 <picture class="img-fit-center">
                                                     <img class="img-fit-center"
                                                         src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                        type="image/png" alt="Yours Clothing" loading="lazy" width="90"
+                                                        type="image/png" width="90"
                                                         height="45" />
                                                 </picture>
                                             </a>
@@ -72,7 +72,7 @@
                                     <div class="premium-offer__media">
                                         <picture class="img-fit-cover">
                                             <img class="img-fit-cover" src="{{ asset('images') . '/' . $coupon->image }}"
-                                                type="image/jpeg" alt="Yours Clothing" loading="lazy" width="300"
+                                                type="image/jpeg"  width="300"
                                                 height="250" />
                                         </picture>
                                     </div>
@@ -83,7 +83,7 @@
                                                 <picture class="img-fit-center">
                                                     <img class="img-fit-center"
                                                         src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                        type="image/png" alt="Yours Clothing" loading="lazy" width="90"
+                                                        type="image/png"  width="90"
                                                         height="45" />
                                                 </picture>
                                             </a>
@@ -129,7 +129,7 @@
                                         <div class="weekly-deal__header">
                                             <picture>
                                                 <img src="{{ asset('images') . '/' . $value->image }}" type="image/jpeg"
-                                                    alt="Marriott" loading="lazy" />
+                                                    />
                                             </picture>
                                         </div>
                                         <div class="weekly-deal__content">
@@ -139,7 +139,7 @@
                                                     <picture class="">
                                                         <img class=""
                                                             src="{{ asset('images') . '/' . $value->store->image }}"
-                                                            type="image/png" alt="Marriott" loading="lazy"
+                                                            type="image/png"
                                                             width="90" height="45" />
                                                     </picture>
                                                 </a>
@@ -177,7 +177,7 @@
 
                                                 <img src="{{ asset('images') . '/' . $coupon->image }}"
                                                     type="image/jpeg" alt="Marriott"
-                                                    loading="lazy" />
+                                                  />
                                             </picture>
                                         </div>
                                         <div class="weekly-deal__content">
@@ -191,7 +191,7 @@
                                                         <img class=""
                                                             src="{{ asset('images') . '/' . $coupon->store->image }}"
                                                             srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/marriott-bonvoy-20220211091551-logo@2x.png 2x"
-                                                            type="image/png" alt="Marriott" loading="lazy"
+                                                            type="image/png"
                                                             width="90" height="45" />
 
                                                     </picture>
@@ -229,7 +229,7 @@
                                             <picture>
 
                                                 <img src="{{ asset('images') . '/' . $value->image }}" type="image/jpeg"
-                                                    alt="Marriott" loading="lazy" />
+                                                     />
                                             </picture>
                                         </div>
                                         <div class="weekly-deal__content">
@@ -239,7 +239,7 @@
                                                     <picture class="">
                                                         <img class=""
                                                             src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                            type="image/png" alt="Marriott" loading="lazy"
+                                                            type="image/png"
                                                             width="90" height="45" />
                                                     </picture>
                                                 </a>
@@ -275,9 +275,9 @@
                                     <div class="mixed-deal__header">
                                         <div class="mixed-deal__logo">
                                             <picture class="img-fit-center">
-                                                <img class="img-fit-center"
+                                                <img class="img-responsive"
                                                     src="{{ asset('images/' . $coupon->store_image) }}" type="image/png"
-                                                    alt="Warrior" width="150" height="75" loading="lazy" />
+                                                    width="150" height="75"  />
                                             </picture>
                                         </div>
                                         <div class="mixed-deal__content">
@@ -318,7 +318,7 @@
                                         <div class="deal-expiraton">
                                             <img class="deal-expiraton__icon"
                                                 src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
-                                                alt="clock" width="14" height="14" loading="lazy" />
+                                                alt="clock" width="14" height="14" />
                                             Expires on {{ date('d-m-Y', strtotime($coupon->expiry_date)) }}
                                         </div>
                                     </div>
@@ -340,7 +340,7 @@
                                         data-dropdown-trigger=".category-accordion__content">
                                         <img src="{{ asset('logo/' . $drop->logo) }}"
                                             width="32" height="32" alt="Food &amp; Drink" class="mr"
-                                            loading="lazy" />
+                                           />
                                         {{ $drop->name }}
                                     </button>
                                     <section class="category-accordion__content">
@@ -353,7 +353,7 @@
                                                             <img class="category-accordion__merchant-box__logo img-fluid"
                                                                 src="{{ asset('images/' . $dropstore->image) }}"
                                                                 type="image/png"
-                                                                alt="Virginia Hayward" loading="lazy" width="90"
+                                                               width="90"
                                                                 style="height: 40px;" height="45" />
                                                         </picture>
                                                     </a>
@@ -379,7 +379,7 @@
                                 <a href="/specials/{{ $event->slug }}" class="latest-event">
                                     <picture class="latest-event__image">
                                         <img class="img-fit-cover" src="{{ asset('images') . '/' . $event->image }}"
-                                            type="image/jpg" alt="Cyber Monday Sales" loading="lazy" width="300"
+                                            type="image/jpg"  width="300"
                                             height="160" />
                                     </picture> <span class="latest-event__name">{{ $event->name }}</span>
                                     <span class="latest-event__bar"></span>
@@ -403,7 +403,7 @@
                                     <div class="latest-blog__media">
                                         <picture class="img-fluid">
                                             <img class="img-fluid" src="{{ asset('images') . '/' . $blogs->image }}"
-                                                type="image/jpeg" alt="Are deals better on Cyber Monday?" loading="lazy"
+                                                type="image/jpeg"
                                                 width="750" height="300" />
                                         </picture>
                                     </div>

@@ -46,7 +46,7 @@
                                         <article class="merchant-deal" data-dropdown data-deal-code id="2864363">
                                             <section class="merchant-deal__body">
                                                 <div class="merchant-deal__shoutout">
-                                                  
+
                                                     <picture>
                                                         <img src="{{ asset('images/' . $coupon->store_image) }}" width="300"
                                                             height="190" class="img-fluid" fetchpriority="high">
@@ -89,7 +89,7 @@
                                                         <img class="deal-expiraton__icon"
                                                             src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
                                                             alt="clock" width="14" height="14"
-                                                            loading="lazy" />
+                                                           />
                                                         Expiry Date:
 
                                                         {{ date('d-m-Y', strtotime($coupon->expiry_date)) }}

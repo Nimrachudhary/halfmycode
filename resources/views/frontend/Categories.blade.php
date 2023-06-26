@@ -23,7 +23,7 @@
                                     <a href="/categories/{{ $category->slug }}">
                                         <picture class="all-categories-item__image">
 
-                                            <img class="all-categories-item__image" src="{{ asset('images') . '/' . $category->image }}" type="image/jpg" alt="Clothing" loading="lazy" width="270" height="140" />
+                                            <img class="all-categories-item__image" src="{{ asset('images') . '/' . $category->image }}" type="image/jpg"  width="270" height="140" />
                                         </picture>
                                         <h3 class="all-categories-item__name">{{ $category->name }}</h3>
                                     </a>

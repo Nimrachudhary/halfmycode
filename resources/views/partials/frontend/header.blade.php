@@ -55,7 +55,7 @@
                                         data-dropdown-trigger="#mobile-menu-top-merchant">
                                         <img class="menu-mobile__item__image"
                                             src="https://cdn.bravo-savings-network.com/cdn2/icons/menu-icon-top-merchants.svg"
-                                            loading="lazy" width="20" height="20" />Top brands
+                                             width="20" height="20" />Top brands
                                     </button>
                                     <nav id="mobile-menu-top-merchant" class="menu-mobile__sub-wrapper"
                                         aria-hidden="true">
@@ -73,7 +73,7 @@
                                                         <img class="top-menu__dropdown__menu-item__image"
                                                             src="{{ asset('images') . '/' . $store->image }}"
                                                             {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/shein-20181012134428-logo@2x.png 2x" --}} type="image/png" alt="SHEIN"
-                                                            loading="lazy" width="90" height="45" />
+                                                         width="90" height="45" />
                                                     </picture> {{ $store->name }}
                                                 </a>
                                             @endforeach
@@ -87,7 +87,7 @@
                                         data-dropdown-trigger="#mobile-menu-categories">
                                         <img class="menu-mobile__item__image"
                                             src="https://cdn.bravo-savings-network.com/cdn2/icons/menu-icon-categories.svg"
-                                            loading="lazy" width="20" height="20" />
+                                           width="20" height="20" />
                                         Categories
                                     </button>
 
@@ -112,7 +112,7 @@
                                 <a style="text-decoration: none" href="/stores" class="menu-mobile__item">
                                     <img class="menu-mobile__item__image"
                                         src="https://cdn.bravo-savings-network.com/cdn2/icons/menu-icon-brands-az.svg"
-                                        loading="lazy" width="20" height="20" />
+                                       width="20" height="20" />
                                     Brands A-Z
                                 </a>
                                 <!-- BLOG -->
@@ -177,7 +177,7 @@
                                 <button type="button" class="top-menu-dropdown-close" data-search-clear>
                                     <img src="https://cdn.bravo-savings-network.com/cdn2/icons/close-o.svg"
                                         width="30" height="30" alt="Close" class="mr--xs"
-                                        loading="lazy" />
+                                      />
                                     Close
                                 </button>
                             </div>
@@ -228,7 +228,7 @@
                                 <button type="button" class="top-menu-dropdown-close" data-search-clear>
                                     <img src="https://cdn.bravo-savings-network.com/cdn2/icons/close-o.svg"
                                         width="30" height="30" alt="Close" class="mr--xs"
-                                        loading="lazy" />
+ />
                                     Close
                                 </button>
                             </div>
@@ -274,7 +274,7 @@
                                                     <img class="top-menu__dropdown__menu-item__image"
                                                         src="{{ asset('images') . '/' . $store->image }}"
                                                         {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/shein-20181012134428-logo@2x.png 2x" --}} type="image/png" alt="SHEIN"
-                                                        loading="lazy" width="90" height="45" />
+                                                     width="90" height="45" />
                                                 </picture> {{ $store->name }}
                                             </a>
                                         @endforeach
@@ -284,7 +284,7 @@
                         </div>
                         <button class="top-menu-dropdown-close" data-dropdown-closer><img
                                 src="https://cdn.bravo-savings-network.com/cdn2/icons/close-o.svg" width="30"
-                                height="30" alt="Close" class="mr--xs" loading="lazy" />Close</button>
+                                height="30" alt="Close" class="mr--xs"/>Close</button>
                     </div>
                     <div class="menu-backdrop" data-dropdown-closer></div>
                 </section>
@@ -366,7 +366,7 @@
                                     <button type="button" class="top-menu-dropdown-close" data-search-clear>
                                         <img src="https://cdn.bravo-savings-network.com/cdn2/icons/close-o.svg"
                                             width="30" height="30" alt="Close" class="mr--xs"
-                                            loading="lazy" />
+                                            />
                                         Close
                                     </button>
                                 </div>

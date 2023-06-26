@@ -36,7 +36,7 @@
                                             <div class='blog-card__header'>
                                                 <picture class="img-fluid">
                                                     <img class="img-fluid" src="{{ asset('images') . '/' . $blog->image }}"
-                                                        type="image/jpeg" alt="Make Mother’s Day memorable" loading="lazy"
+                                                        type="image/jpeg" 
                                                         width="750" height="300" />
                                                 </picture>
                                             </div>

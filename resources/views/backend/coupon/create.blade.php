@@ -82,7 +82,7 @@
                                                 <label for="customFile1">Background Image</label>
                                                 <div class="custom-file">
                                                     <input type="file" name="image" class="custom-file-input"
-                                                        id="customFile1" required />
+                                                        id="customFile1"  />
                                                     <label class="custom-file-label" for="customFile1">Choose image</label>
                                                 </div>
                                             </div>

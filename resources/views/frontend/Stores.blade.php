@@ -20,7 +20,7 @@
                                     <picture class="merchant-box__logo">
                                         <img class="merchant-box__logo" src="{{ asset('images') . '/' . $store->image }}"
                                             type="image/png" alt="" width="150" height="75" style="height: 150px;"
-                                            loading="lazy" />
+                                            />
                                     </picture>
                                     <span class="merchant-box__name">
                                         <strong class="font-bold">{{ $store->name }}</strong>

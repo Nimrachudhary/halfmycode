@@ -27,9 +27,9 @@
                                     {{ $category->description }}
                                 </h5>
                                 <picture class="category-header__image">
-                                 
+
                                     <img class="img-fit-cover" src="{{ asset('images') . '/' . $category->image }}"
-                                        type="image/jpg" alt="Mother's Day Gifts" loading="lazy" width="300"
+                                        type="image/jpg"  width="300"
                                         height="160" />
                                 </picture>
                             </div>
@@ -50,7 +50,7 @@
                                                 <picture class="merchant-box__logo">
                                                     <img class="merchant-box__logo"
                                                         src="{{ asset('images') . '/' . $store->image }}" type="image/png"
-                                                        alt="" loading="lazy" width="90" height="45" />
+                                                        alt=""  width="90" height="45" />
                                                 </picture>
                                                 <span class="merchant-box__name break-word">{{ $store->name }}</span>
                                             </a>
@@ -123,7 +123,7 @@
                                                 <div class="deal-expiraton">
                                                     <img class="deal-expiraton__icon"
                                                         src="https://cdn.bravo-savings-network.com/cdn2/icons/clock.svg"
-                                                        alt="clock" width="14" height="14" loading="lazy" />
+                                                        alt="clock" width="14" height="14"  />
                                                     Always active
                                                 </div>
 
@@ -153,7 +153,7 @@
                                                     data-dropdown-trigger=".category-accordion__content">
                                                     <img src="https://cdn.bravo-savings-network.com/cdn2/icons/categories/food.svg"
                                                         width="32" height="32" alt="Food &amp; Drink"
-                                                        class="mr" loading="lazy" />
+                                                        class="mr" />
                                                         {{ $drop->name }}
                                                 </button>
                                                 <section class="category-accordion__content">
@@ -167,8 +167,7 @@
 
                                                                         <img class="category-accordion__merchant-box__logo img-fluid"
                                                                             src="{{ asset('images/' . $dropstore->image) }}"
-                                                                            type="image/png" alt="Virginia Hayward"
-                                                                            loading="lazy" width="90"style="height: 40px;"
+                                                                            type="image/png"  width="90"style="height: 40px;"
                                                                             height="45" />
                                                                     </picture>
                                                                 </a>

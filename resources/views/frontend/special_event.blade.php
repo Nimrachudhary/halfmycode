@@ -23,7 +23,7 @@
                                     <picture class="latest-event__image">
                                         <img class="img-fit-cover"
                                             src="{{ asset('images') . '/' . $specialevent->image }}"
-                                            type="image/jpg" alt="Mother's Day Gifts" loading="lazy" width="300"
+                                            type="image/jpg" width="300"
                                             height="160" />
                                     </picture>
                                     <span class="latest-event__name">{{ $specialevent->name }}</span>

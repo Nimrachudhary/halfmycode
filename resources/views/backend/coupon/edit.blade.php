@@ -78,7 +78,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="customFile1">Image</label>
+                                                <label for="customFile1">Background Image</label>
                                                 <div class="custom-file">
                                                     <input type="file" name="image" class="custom-file-input"
                                                         id="customFile1" />
@@ -86,6 +86,7 @@
                                                 </div>
                                             </div>
 
+                                           
 
                                             <div class="form-group">
                                                 <label for="catgory_id">Categories </label>

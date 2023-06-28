@@ -20,7 +20,7 @@ class CouponController extends Controller
     public function index(Request $request)
     {
         if (request()->ajax()) {
-            return datatables()->of(Coupon::select('*'))
+            return datatables()->of(Coupon::select('*')->with('store'))
                 ->addColumn('action', 'backend.coupon.action')
                 ->rawColumns(['action'])
                 ->addIndexColumn()

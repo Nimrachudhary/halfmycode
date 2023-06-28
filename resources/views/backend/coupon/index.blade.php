@@ -30,14 +30,13 @@
                                     <thead>
                                         <tr>
                                             <th>id</th>
-                                            <th>coupon_title</th>
-                                            <th>coupon_code</th>
-                                            <th>Cupon_type</th>
+                                            <th>coupon title</th>
+                                            <th>coupon code</th>
+                                            <th>Cupon type</th>
+                                            <th>Store</th>
                                             <th>Status</th>
                                             <th>Action</th>
-
                                         </tr>
-
                                     </thead>
                                 </table>
                             </div>
@@ -75,6 +74,10 @@
                     {
                         data: 'Cupon_type',
                         name: 'Cupon_type'
+                    },
+                    {
+                        data: 'store.name',
+                        name: 'store.name'
                     },
                     {
                         data: 'status',

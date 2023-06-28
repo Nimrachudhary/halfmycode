@@ -37,7 +37,7 @@ class FrontStoreController extends Controller
     }
     public function subblog($id)
     {
-        
+
         $showsblog = Blog::where('slug', $id)->get();
         return view('frontend.detail-blog',compact('showsblog'));
     }
@@ -59,7 +59,7 @@ class FrontStoreController extends Controller
           });
         $blogs = Blog::limit(5)->get();
         $weeks = Coupon::with(['store'])->get();
-        $coupons = Coupon::with(['store'])->limit(3)->get();
+        $coupons = Coupon::with(['store'])->limit(3)->where('image', '<>', null)->get();
 
         $showcoupon = DB::table('coupons')
         ->leftJoin('stores','coupons.store_id', '=', 'stores.id')

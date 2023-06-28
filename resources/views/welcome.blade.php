@@ -4,7 +4,7 @@
         <section class="bg-light">
             <div class="premium-offer-wrapper">
                 <div class="text-center">
-                    <h4 class="mb--xs mt--xs">Save on your shopping with our best discount codes and deals!</h4>
+                    <h4 class="mb--xs mt--xs" id="heading-1">Save on your shopping with our best discount codes and deals!</h4>
                     <h5>Discover promo codes and offers from top online brands and enjoy huge savings with Halfmycode
                     </h5>
                 </div>

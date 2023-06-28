@@ -151,7 +151,7 @@
                                             <section class="merchant-deal__body">
                                                 <div class="merchant-deal__shoutout">
                                                     <picture>
-                                                        <img src="{{ asset('images/' . $store->image) }}" style="width: 74px"
+                                                        <img src="{{ asset('images/' . $store->image) }}" width="300"
                                                             height="190" class="img-fluid" fetchpriority="high">
                                                     </picture>
                                                 </div>
@@ -219,34 +219,6 @@
                     </section>
                 </div>
             </section>
-{{-- mob view sidebar --}}
-<section class="pt-2 pt-lg-0 overflow-hidden d-none d-lg-block">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <nav class="breadcrumbs pl-md-4">
-                    <a href="/" target="_self">Halfmycode</a>
-                    <span> {{ $store->name }}</span>
-                </nav>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="star-rating-mobile-wrapper mb-1">
-                    <div class="star-rating-wrapper ml-md-4 mb-1">
-                        <div class="star-rating mobile" style="--rating-value: 5"></div>
-                        Average score of 5 out of 465 reviews
-                        <div id='rating-feedback-mobile-ok' class='bg-soft pl-lg'
-                            style='display: none'>Thank you for your rating!</div>
-                        <div id='rating-feedback-mobile-ko' class='bg-soft pl-lg'
-                            style='display: none'>Sorry! An error occurred whilst registering your rating.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-{{-- end --}}
 
             <section class="pt--xxs-mobile pl--md overflow-hidden hidden-desktop">
             </section>
@@ -362,7 +334,7 @@
                     </div>
                 </section>
             </section>
-            @include('frontend.footer_icone_stats')
+            {{-- @include('frontend.footer_icone_stats') --}}
         </main>
     </body>
 @endsection

@@ -109,7 +109,7 @@
                 </section>
             </div>
         </section>
-        <section class="mt--xxl">
+        <section class="">
             <!-- Deals of the week DESKTOP -->
             <div class="container weekly-deal-fixed-container no-gap-mobile fluid-tablet hidden-mobile hidden-tablet">
                 <section class="section-content section-content--full">
@@ -159,60 +159,7 @@
                     </div>
                 </section>
             </div>
-            {{-- end --}}
-            <!-- Deals of the week mob -->
-            {{-- <div class="container no-gap-mobile fluid-tablet hidden-desktop">
-                <section class="section-content section-content--full">
-                    <div id="slider-weekly-body" class="has-bg">
-                        <p class="h1 text-center weekly-deal-title">Deals of the week</p>
-                        <div class="grid-3 grid-scroller-mobile pt--xl pl pr pl--lg-mobile pb--md-mobile">
-                            @foreach ($weeks as $value)
-                                @if ($value->deal_week == 1)
-                                    <article id="boxWeeklyDealArticle_4261" class="weekly-deal"
-                                        data-href='/discount-code-marriott-bonvoy.html' data-pos="1"
-                                        data-lst="home-weekly-deals" data-id="4261"
-                                        data-title="R3JhYiB0aGlzIE1hcnJpb3R0IGRpc2NvdW50IGNvZGUgZm9yIDI1JSBvZmYgeW91ciBzdGF5IGluIEV1cm9wZSAtIE1hcnJpb3R0">
-                                        <div class="weekly-deal__header">
-                                            <picture>
 
-                                                <img src="{{ asset('images') . '/' . $coupon->image }}"
-                                                    type="image/jpeg" alt="Marriott"
-                                                  />
-                                            </picture>
-                                        </div>
-                                        <div class="weekly-deal__content">
-                                            <div class="grid-2">
-                                                <a href="/discount-code-marriott-bonvoy.html" class="weekly-deal__logo"
-                                                    title="">
-                                                    <picture class="">
-                                                        <source
-                                                            srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/marriott-bonvoy-20220211091551-logo.webp, https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/marriott-bonvoy-20220211091551-logo@2x.webp 2x"
-                                                            type="image/webp">
-                                                        <img class=""
-                                                            src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                            srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/marriott-bonvoy-20220211091551-logo@2x.png 2x"
-                                                            type="image/png"
-                                                            width="90" height="45" />
-
-                                                    </picture>
-                                                </a>
-                                                <label class="weekly-deal__title">
-                                                    <a
-                                                        href="/discount-code-marriott-bonvoy.html">{{ $value->store->name }}</a>
-                                                </label>
-                                            </div>
-                                            <div class="weekly-deal__description">
-                                                {{ $value->description }}
-                                            </div>
-                                        </div>
-                                    </article>
-                                @endif
-                            @endforeach
-
-                        </div>
-                    </div>
-                </section>
-            </div> --}}
             <div class="container no-gap-mobile fluid-tablet hidden-desktop">
                 <section class="section-content section-content--full">
                     <div id="slider-premium-body" class="premium-offer-wrapper">
@@ -287,8 +234,9 @@
                                             <div>
                                                 <div>
                                                     @if ($coupon->Cupon_type == 'getcode')
-                                                        <div class="merchant-deal__cta copycodebtn" style="height: 55px; width: 235px;">
+                                                        <div class="merchant-deal__cta copycodebtn" style="height: 55px; width: 269px;">
                                                             <a class="btn-code btn-code--ribbon btn-show-code"
+                                                            style="margin-left: 36px;"
                                                                 data-code="{{ $coupon->coupon_code }}"
                                                                 data-modal-id="#exampleModal{{ $coupon->id }}"
                                                                 name="getcode[]" id="{{ $coupon->coupon_code }}"
@@ -303,10 +251,10 @@
                                                     @elseif($coupon->Cupon_type == 'getdeal')
                                                         <div class="merchant-deal__cta" style="height: 55px; width: 235px;">
                                                             <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}"
-                                                                target="_blank"
+                                                                target="_blank" style="margin-left: 36px;"
                                                                 data-modal-id="#exampleModal{{ $coupon->id }}"
                                                                 data-sku="UK-2864363" data-pos="1" data-lst="merchant">
-                                                                <span>GET DEAL</span>
+                                                                <span >GET DEAL</span>
                                                             </a>
                                                         </div>
                                                     @endif

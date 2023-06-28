@@ -5,8 +5,8 @@
             <div class="premium-offer-wrapper">
                 <div class="text-center">
                     <h4 class="mb--xs mt--xs" id="heading-1">Save on your shopping with our best discount codes and deals!</h4>
-                    <h5>Discover promo codes and offers from top online brands and enjoy huge savings with Halfmycode
-                    </h5>
+                    <h4>Discover promo codes and offers from top online brands and enjoy huge savings with Halfmycode
+                    </h4>
                 </div>
 
             </div>
@@ -40,7 +40,7 @@
                                             </a>
                                         </div>
                                         <p>
-                                            {{ $coupon->description }}
+                                            {!! Str::limit($coupon->description, 30)!!}
                                         </p>
                                         <div class="premium-offer__footer">
                                             <a href="/store/{{ $coupon->store->slug }}" class="premium-offer__link">
@@ -89,7 +89,7 @@
                                             </a>
                                         </div>
                                         <p>
-                                            {{ $coupon->description }}
+                                            {!! Str::limit($coupon->description, 30)!!}
                                         </p>
                                         <div class="premium-offer__footer">
                                             <a href="/store/{{ $coupon->store->slug }}" class="premium-offer__link">
@@ -287,7 +287,7 @@
                                             <div>
                                                 <div>
                                                     @if ($coupon->Cupon_type == 'getcode')
-                                                        <div class="merchant-deal__cta copycodebtn">
+                                                        <div class="merchant-deal__cta copycodebtn" style="height: 55px; width: 235px;">
                                                             <a class="btn-code btn-code--ribbon btn-show-code"
                                                                 data-code="{{ $coupon->coupon_code }}"
                                                                 data-modal-id="#exampleModal{{ $coupon->id }}"
@@ -301,7 +301,7 @@
                                                             </a>
                                                         </div>
                                                     @elseif($coupon->Cupon_type == 'getdeal')
-                                                        <div class="merchant-deal__cta">
+                                                        <div class="merchant-deal__cta" style="height: 55px; width: 235px;">
                                                             <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}"
                                                                 target="_blank"
                                                                 data-modal-id="#exampleModal{{ $coupon->id }}"

@@ -21,7 +21,7 @@
                         <section class="section-content section-content--full">
                             <div class="section-content__page-content">
                                 <div class="merchant-header">
-                                    <div class="merchant-header__logo">
+                                    <div class="merchant-header__logo" style="height: 150px;width: 150px;">
                                         <a href="{{ $store->affilite_link }}" target="_blank">
                                             <picture>
                                                 <img src="{{ asset('images/' . $store->image) }}" width="300"

@@ -67,12 +67,10 @@
                                                 <a style="text-decoration: none" href="/store/{{ $store->slug }}"
                                                     class="menu-mobile__sub-item">
                                                     <picture class="top-menu__dropdown__menu-item__image">
-                                                        {{-- <source
-                                                            srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/shein-20181012134428-logo.webp, https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/shein-20181012134428-logo@2x.webp 2x"
-                                                            type="image/webp"> --}}
+
                                                         <img class="top-menu__dropdown__menu-item__image"
                                                             src="{{ asset('images') . '/' . $store->image }}"
-                                                            {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/shein-20181012134428-logo@2x.png 2x" --}} type="image/png" alt="SHEIN"
+                                                           type="image/png"
                                                          width="90" height="45" />
                                                     </picture> {{ $store->name }}
                                                 </a>
@@ -142,51 +140,7 @@
             </nav>
         </div>
     </div>
-    {{-- <div id="modal-search-mobile" class="modal-frame modal-search-mobile">
-        <div class="modal-body">
-            <button class="modal-close" data-modal-closer>
-                Close
-                <span>&times;</span>
-            </button>
-            <div class="modal-search-body-inner">
-                <div class="h4 font-medium mb--sm">Search</div>
-                <form class="form-search" action="" method="post">
-                    <div class="form-search__inner">
-                        <div class="input-btn-group">
-                            <input name="search" required="required" autocomplete="off"
-                                placeholder="E.g. SHEIN, Spabreaks.com" class="form-search__input"
-                                data-search-input />
-                            <button type="button" class="form-search__submit" aria-label="search"
-                                data-search-submit><svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 0 136 136.219">
-                                    <path fill="currentColor"
-                                        d="M93.148 80.832c16.352-23.09 10.883-55.062-12.207-71.41S25.88-1.461 9.531 21.632C-6.816 44.723-1.352 76.693 21.742 93.04a51.226 51.226 0 0055.653 2.3l37.77 37.544c4.077 4.293 10.862 4.465 15.155.387 4.293-4.075 4.465-10.86.39-15.153a9.21 9.21 0 00-.39-.39zm-41.84 3.5c-18.245.004-33.038-14.777-33.05-33.023-.004-18.246 14.777-33.04 33.027-33.047 18.223-.008 33.008 14.75 33.043 32.972.031 18.25-14.742 33.067-32.996 33.098h-.023zm0 0" />
-                                </svg>
-                            </button>
-                            <button type="button" class="form-search__clear" data-search-clear
-                                style="display: none">
-                                &times;
-                            </button>
-                        </div>
-                        <section class="form-search__results" style="display: none">
-                            <!-- results brands -->
-                            <div class="search-results-items-list">
-                                <!-- Search results here -->
-                            </div>
-                            <!-- button close desktop -->
-                            <div class="search-results-close mt--lg hidden-mobile">
-                                <button type="button" class="top-menu-dropdown-close" data-search-clear>
-                                    <img src="https://cdn.bravo-savings-network.com/cdn2/icons/close-o.svg"
-                                        width="30" height="30" alt="Close" class="mr--xs"
-                                      />
-                                    Close
-                                </button>
-                            </div>
-                        </section>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> --}}
+
     <div class="modal fade" id="search_modal" tabindex="-1" data-backdrop="false" role="dialog"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -268,12 +222,10 @@
                                             <a style="text-decoration: none" href="/store/{{ $store->slug }}"
                                                 class="top-menu__dropdown__menu-item">
                                                 <picture class="top-menu__dropdown__menu-item__image">
-                                                    {{-- <source
-                                            srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/shein-20181012134428-logo.webp, https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/shein-20181012134428-logo@2x.webp 2x"
-                                            type="image/webp"> --}}
+
                                                     <img class="top-menu__dropdown__menu-item__image"
                                                         src="{{ asset('images') . '/' . $store->image }}"
-                                                        {{-- srcset="https://cdn.bravo-savings-network.com/cdn2/merchant/logo/rect/sm/shein-20181012134428-logo@2x.png 2x" --}} type="image/png" alt="SHEIN"
+                                                      type="image/png" 
                                                      width="90" height="45" />
                                                 </picture> {{ $store->name }}
                                             </a>

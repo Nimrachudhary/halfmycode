@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>HalfmyCode: Discount Code, Vouchers & Deals</title>
     <meta name="description" content="Best Saving Promo Code, Deals, Offers at Halfmycode.com">
@@ -12,56 +11,13 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   
-    <style>
-        .search_resultbox {
-            background: #fff;
-            z-index: 999999;
-            position: absolute;
-            top: 100%;
-            width: 100%;
-            display: block;
-            /* border: 1px solid #e8e8e8; */
-            box-shadow: 0 1px 3px 0 #b3b3b3b3;
-            max-height: 500px;
-            overflow-y: scroll;
-            overflow-x: hidden;
-        }
-
-        .searchbox .icon-search {
-            fill: #fff;
-            font-size: 24px
-        }
-
-        #onhover:hover {
-            background-color: rgb(209, 207, 207);
-            color: black;
-            font-weight: 700;
-
-        }
-
-
-        .searchbox input {
-            height: 35px
-        }
-    </style>
   <?php
   $abc=App\Models\Herderdevelopermod::where(['id' => 1])->get();
   print_r($abc[0]->header_description);
   ?>
 </head>
-
-
-
 <body class="template">
-    {{-- <!-- Google Tag Manager (noscript) --> --}}
-    {{-- <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCMWLD5" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-    </noscript> --}}
-    {{-- <!-- End Google Tag Manager (noscript) --> --}}
     <div class="area area--over-header">
-        <!-- CMS-OVER-HEADER -->
     </div>
     {{-- header --}}
     @include('partials.frontend.header')
@@ -70,8 +26,6 @@
     @yield('front-content')
     <!--// Content //-->
     @include('partials.frontend.footer')
-
-
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css"

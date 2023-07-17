@@ -1,5 +1,4 @@
 <header class="area area--header sticky-top">
-
     <div class="bg-brand">
         <div class="container">
             <nav class="main-header" data-dropdown data-dropdown-lock-scroll>
@@ -225,7 +224,7 @@
 
                                                     <img class="top-menu__dropdown__menu-item__image"
                                                         src="{{ asset('images') . '/' . $store->image }}"
-                                                      type="image/png" 
+                                                      type="image/png"
                                                      width="90" height="45" />
                                                 </picture> {{ $store->name }}
                                             </a>

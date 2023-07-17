@@ -72,6 +72,58 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
           integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function() {
+        // alert('nn Copy');
+        $(".btn-show-code").click(function(e) {
+            e.preventDefault();
+
+            // ----- Copy text to clip board code
+            var getcode = $(this).attr('value');
+            var text = getcode;
+            // Create a temporary input element
+            var tempInput = document.createElement('input');
+            // Set the input element's value to the text to be copied
+            tempInput.value = text;
+            // Append the input element to the document
+            document.body.appendChild(tempInput);
+            // Select the text in the input element
+            tempInput.select();
+            // Copy the selected text to the clipboard
+            document.execCommand('copy');
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
+
+            // ----- Open url in new tab
+            var url = $(this).attr('data-affilinkite-link');
+            window.open(url, '_blank');
+
+            // ----- Change span element text
+            $(this).find('span').text('Code Copied');
+
+            // alert('Code Copy');
+            debugger
+        });
+    });
+
+    $(document).on('click', '.btn-show-code', function() {
+        $modal_id = $(this).data('modal-id');
+        $link = $(this).data('affilinkite-link');
+        $($modal_id).modal('show');
+        window.open($link, '_blank');
+
+    });
+    const btn = document.getElementById('copyButton');
+    btn.addEventListener('click', function handleClick() {
+        btn.textContent = 'Code Copied';
+        setTimeout(function() {
+            btn.text('Copy');
+        }, 2000);
+    });
+</script>
   </footer>
 
   {{-- end footer --}}

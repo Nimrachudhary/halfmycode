@@ -4,7 +4,8 @@
         <section class="bg-light">
             <div class="premium-offer-wrapper">
                 <div class="text-center">
-                    <h4 class="mb--xs mt--xs" id="heading-1">Save on your shopping with our best discount codes and deals!</h4>
+                    <h4 class="mb--xs mt--xs" id="heading-1">Save on your shopping with our best discount codes and deals!
+                    </h4>
                     <h4>Discover promo codes and offers from top online brands and enjoy huge savings with Halfmycode
                     </h4>
                 </div>
@@ -23,8 +24,7 @@
                                     <div class="premium-offer__media">
                                         <picture class="img-fit-cover">
                                             <img class="img-fit-cover" src="{{ asset('images') . '/' . $coupon->image }}"
-                                                type="image/jpeg"   width="300"
-                                                height="250" />
+                                                type="image/jpeg" width="300" height="250" />
                                         </picture>
                                     </div>
                                     <div class="premium-offer__body">
@@ -34,13 +34,12 @@
                                                 <picture class="img-fit-center">
                                                     <img class="img-fit-center"
                                                         src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                        type="image/png" width="90"
-                                                        height="45" />
+                                                        type="image/png" width="90" height="45" />
                                                 </picture>
                                             </a>
                                         </div>
                                         <p>
-                                            {!! Str::limit($coupon->description, 30)!!}
+                                            {!! Str::limit($coupon->description, 30) !!}
                                         </p>
                                         <div class="premium-offer__footer">
                                             <a href="/store/{{ $coupon->store->slug }}" class="premium-offer__link">
@@ -72,8 +71,7 @@
                                     <div class="premium-offer__media">
                                         <picture class="img-fit-cover">
                                             <img class="img-fit-cover" src="{{ asset('images') . '/' . $coupon->image }}"
-                                                type="image/jpeg"  width="300"
-                                                height="250" />
+                                                type="image/jpeg" width="300" height="250" />
                                         </picture>
                                     </div>
                                     <div class="premium-offer__body">
@@ -83,13 +81,12 @@
                                                 <picture class="img-fit-center">
                                                     <img class="img-fit-center"
                                                         src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                        type="image/png"  width="90"
-                                                        height="45" />
+                                                        type="image/png" width="90" height="45" />
                                                 </picture>
                                             </a>
                                         </div>
                                         <p>
-                                            {!! Str::limit($coupon->description, 30)!!}
+                                            {!! Str::limit($coupon->description, 30) !!}
                                         </p>
                                         <div class="premium-offer__footer">
                                             <a href="/store/{{ $coupon->store->slug }}" class="premium-offer__link">
@@ -128,8 +125,7 @@
                                         data-id="4261"data-title="R3JhYiB0aGlzIE1hcnJpb3R0IGRpc2NvdW50IGNvZGUgZm9yIDI1JSBvZmYgeW91ciBzdGF5IGluIEV1cm9wZSAtIE1hcnJpb3R0">
                                         <div class="weekly-deal__header">
                                             <picture>
-                                                <img src="{{ asset('images') . '/' . $value->image }}" type="image/jpeg"
-                                                    />
+                                                <img src="{{ asset('images') . '/' . $value->image }}" type="image/jpeg" />
                                             </picture>
                                         </div>
                                         <div class="weekly-deal__content">
@@ -139,8 +135,7 @@
                                                     <picture class="">
                                                         <img class=""
                                                             src="{{ asset('images') . '/' . $value->store->image }}"
-                                                            type="image/png"
-                                                            width="90" height="45" />
+                                                            type="image/png" width="90" height="45" />
                                                     </picture>
                                                 </a>
                                                 <label class="weekly-deal__title">
@@ -175,8 +170,8 @@
                                         <div class="weekly-deal__header">
                                             <picture>
 
-                                                <img src="{{ asset('images') . '/' . $value->image }}" type="image/jpeg"
-                                                     />
+                                                <img src="{{ asset('images') . '/' . $value->image }}"
+                                                    type="image/jpeg" />
                                             </picture>
                                         </div>
                                         <div class="weekly-deal__content">
@@ -186,8 +181,7 @@
                                                     <picture class="">
                                                         <img class=""
                                                             src="{{ asset('images') . '/' . $coupon->store->image }}"
-                                                            type="image/png"
-                                                            width="90" height="45" />
+                                                            type="image/png" width="90" height="45" />
                                                     </picture>
                                                 </a>
                                                 <label class="weekly-deal__title">
@@ -212,7 +206,7 @@
         <section class="bg-light mt--xxl">
             <div class="container">
                 <section class="section-content section-content--full">
-                    <div class="mixed-deal-wrapper mixed-deal-wrapper--home pt--xxl pb--xxl">
+                    <div class="mixed-deal-wrapper mixed-deal-wrapper--home pb--xxl">
                         <p class="h1 text-center">Top Vouchers</p>
                         <div class="grid-1 grid-2-md grid-align-top">
                             <!-- DEAL WITH LOGO CODE ACTIVE -->
@@ -224,19 +218,20 @@
                                             <picture class="img-fit-center">
                                                 <img class="img-responsive"
                                                     src="{{ asset('images/' . $coupon->store_image) }}" type="image/png"
-                                                    width="150" height="75"  />
+                                                    width="150" height="75" />
                                             </picture>
                                         </div>
                                         <div class="mixed-deal__content">
-                                            <p class="mixed-deal__title">
+                                            <p class="mixed-deal__title" style="margin: 10px;">
                                                 {{ $coupon->coupon_title }}
                                             </p>
                                             <div>
                                                 <div>
                                                     @if ($coupon->Cupon_type == 'getcode')
-                                                        <div class="merchant-deal__cta copycodebtn" style="height: 55px; width: 269px;">
+                                                        <div class="merchant-deal__cta copycodebtn"
+                                                            style="height: 55px; width: 269px;">
                                                             <a class="btn-code btn-code--ribbon btn-show-code"
-                                                            style="margin-left: 36px;"
+                                                                style="margin-left: 36px;"
                                                                 data-code="{{ $coupon->coupon_code }}"
                                                                 data-modal-id="#exampleModal{{ $coupon->id }}"
                                                                 name="getcode[]" id="{{ $coupon->coupon_code }}"
@@ -249,12 +244,13 @@
                                                             </a>
                                                         </div>
                                                     @elseif($coupon->Cupon_type == 'getdeal')
-                                                        <div class="merchant-deal__cta" style="height: 55px; width: 235px;">
+                                                        <div class="merchant-deal__cta"
+                                                            style="height: 55px; width: 235px;">
                                                             <a class="btn btn-offer" href="{{ $coupon->Affilate_Link }}"
                                                                 target="_blank" style="margin-left: 36px;"
                                                                 data-modal-id="#exampleModal{{ $coupon->id }}"
                                                                 data-sku="UK-2864363" data-pos="1" data-lst="merchant">
-                                                                <span >GET DEAL</span>
+                                                                <span>GET DEAL</span>
                                                             </a>
                                                         </div>
                                                     @endif
@@ -286,9 +282,8 @@
                                 <article class="category-accordion" data-dropdown>
                                     <button class="category-accordion__title"
                                         data-dropdown-trigger=".category-accordion__content">
-                                        <img src="{{ asset('logo/' . $drop->logo) }}"
-                                            width="32" height="32" alt="Food &amp; Drink" class="mr"
-                                           />
+                                        <img src="{{ asset('logo/' . $drop->logo) }}" width="32" height="32"
+                                            alt="Food &amp; Drink" class="mr" />
                                         {{ $drop->name }}
                                     </button>
                                     <section class="category-accordion__content">
@@ -300,9 +295,8 @@
                                                         <picture class="category-accordion__merchant-box__logo img-fluid">
                                                             <img class="category-accordion__merchant-box__logo img-fluid"
                                                                 src="{{ asset('images/' . $dropstore->image) }}"
-                                                                type="image/png"
-                                                               width="90"
-                                                                style="height: 40px;" height="45" />
+                                                                type="image/png" width="90" style="height: 40px;"
+                                                                height="45" />
                                                         </picture>
                                                     </a>
                                                 @endforeach
@@ -317,7 +311,7 @@
             </div>
         </section>
         {{-- Special events start --}}
-        <section class="mt--xxl">
+        {{-- <section class="mt--xxl">
             <div class="container">
                 <section class="section-content section-content--full">
                     <div class="category-accordion-wrapper">
@@ -337,7 +331,7 @@
                     </div>
                 </section>
             </div>
-        </section>
+        </section> --}}
         {{-- Special events end --}}
         <!-- START -->
         <section class="mt--xxl overflow-hidden">
@@ -351,8 +345,7 @@
                                     <div class="latest-blog__media">
                                         <picture class="img-fluid">
                                             <img class="img-fluid" src="{{ asset('images') . '/' . $blogs->image }}"
-                                                type="image/jpeg"
-                                                width="750" height="300" />
+                                                type="image/jpeg" width="750" height="300" />
                                         </picture>
                                     </div>
                                     <div class="latest-blog__content">
@@ -383,7 +376,7 @@
         </section>
         <!-- END -->
         @include('frontend.recently_update_brand')
-        <section class="mt--xxl">
+        <section class="">
             <div class="container">
                 <section class="section-content section-content--full">
                     <h3 class="h3 mb--xxs">The Best USA Promo Codes – Buy More for Less at HALFMYCODE</h3>
@@ -483,55 +476,4 @@
         @include('frontend.footer_icone_stats')
     </main>
 @endsection
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    $(document).ready(function() {
-        // alert('nn Copy');
-        $(".btn-show-code").click(function(e) {
-            e.preventDefault();
 
-            // ----- Copy text to clip board code
-            var getcode = $(this).attr('value');
-            var text = getcode;
-            // Create a temporary input element
-            var tempInput = document.createElement('input');
-            // Set the input element's value to the text to be copied
-            tempInput.value = text;
-            // Append the input element to the document
-            document.body.appendChild(tempInput);
-            // Select the text in the input element
-            tempInput.select();
-            // Copy the selected text to the clipboard
-            document.execCommand('copy');
-            // Remove the temporary input element
-            document.body.removeChild(tempInput);
-
-            // ----- Open url in new tab
-            var url = $(this).attr('data-affilinkite-link');
-            window.open(url, '_blank');
-
-            // ----- Change span element text
-            $(this).find('span').text('Code Copied');
-
-            // alert('Code Copy');
-            debugger
-        });
-    });
-
-    $(document).on('click', '.btn-show-code', function() {
-        $modal_id = $(this).data('modal-id');
-        $link = $(this).data('affilinkite-link');
-        $($modal_id).modal('show');
-        window.open($link, '_blank');
-
-    });
-    const btn = document.getElementById('copyButton');
-    btn.addEventListener('click', function handleClick() {
-        btn.textContent = 'Code Copied';
-        setTimeout(function() {
-            btn.text('Copy');
-        }, 2000);
-    });
-</script>

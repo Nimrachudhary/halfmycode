@@ -6254,11 +6254,11 @@ h1,
     }
 }
 
-@media screen and (min-width: 200px) and (max-width:400px) {
+/* @media screen and (min-width: 200px) and (max-width:400px) {
     body {
         width: 163%;
     }
-}
+} */
 @media screen and (min-width: 200px) and (max-width:400px) {
      #heading-1{
         font-size: 40px;

@@ -216,13 +216,12 @@
                                 @if ($key < 4)
                                     <div>
                                         @foreach ($chunk as $store)
-                                            <a style="text-decoration: none" href="/store/{{ $store->slug }}"
-                                                class="top-menu__dropdown__menu-item">
                                                 <picture class="top-menu__dropdown__menu-item__image">
+
                                                     <img class="top-menu__dropdown__menu-item__image"
                                                         src="{{ asset('images') . '/' . $store->image }}"
                                                       type="image/png"
-                                                     />
+ />
                                                 </picture> {{ $store->name }}
                                             </a>
                                         @endforeach
